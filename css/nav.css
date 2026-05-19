@@ -47,17 +47,17 @@
 .brand-light .brand-text strong { color: #ffffff; }
 .brand-light .brand-text em { color: rgba(255,255,255,0.55); }
 
-/* ── Main nav ── */
+/* ── Main nav (dark navy) ── */
 .nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--paper);
-  border-bottom: 1px solid var(--line);
+  background: var(--inkSection);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: box-shadow 0.2s ease;
 }
 .nav.nav-scrolled {
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.30);
 }
 .nav-inner {
   max-width: var(--page-max);
@@ -70,6 +70,11 @@
   gap: 24px;
 }
 
+/* Brand inside the dark nav: accent V-square + white wordmark */
+.nav .brand-mark { background: var(--accent); color: #ffffff; }
+.nav .brand-text strong { color: #ffffff; }
+.nav .brand-text em     { color: rgba(255,255,255,0.55); }
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -80,14 +85,14 @@
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: var(--inkSoft);
+  color: rgba(255,255,255,0.70);
   transition: color 0.15s ease;
   display: inline-flex;
   align-items: center;
   gap: 4px;
 }
-.nav-links a:hover { color: var(--ink); }
-.nav-links a.is-active { color: var(--ink); font-weight: 600; }
+.nav-links a:hover { color: #ffffff; }
+.nav-links a.is-active { color: #ffffff; font-weight: 600; }
 .nav-links a .caret {
   display: inline-block;
   font-size: 9px;
@@ -103,12 +108,12 @@
 .nav-phone {
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 13px;
-  color: var(--inkSoft);
+  color: rgba(255,255,255,0.70);
   white-space: nowrap;
   line-height: 1.2;
   transition: color 0.15s ease;
 }
-.nav-phone:hover { color: var(--ink); }
+.nav-phone:hover { color: #ffffff; }
 
 /* Mobile burger */
 .nav-burger {
@@ -126,7 +131,7 @@
   display: block;
   width: 20px;
   height: 1.5px;
-  background: var(--ink);
+  background: #ffffff;
   position: relative;
 }
 .nav-burger span::before,
@@ -136,7 +141,7 @@
   left: 0;
   width: 20px;
   height: 1.5px;
-  background: var(--ink);
+  background: #ffffff;
 }
 .nav-burger span::before { top: -6px; }
 .nav-burger span::after  { top:  6px; }
@@ -210,7 +215,7 @@
     align-items: flex-start;
     gap: 14px;
     padding-top: 8px;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(255,255,255,0.10);
   }
   .nav.nav-open .nav-right {
     order: 4;
