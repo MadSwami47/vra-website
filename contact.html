@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Vantage Risk Advisors</title>
+  <meta name="description" content="Get in touch with Vantage Risk Advisors. Tell us about your operation and we'll come back with real options from real carriers within one business day.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/pages/contact.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Vantage Risk Advisors home">
+        <img src="assets/logo-dark.svg" alt="Vantage Risk Advisors">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="healthcare.html">Healthcare</a></li>
+          <li><a href="hospitality.html">Hospitality</a></li>
+          <li><a href="multifamily.html">Multifamily</a></li>
+          <li><a href="business.html">Business</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-accent">Get a quote <span aria-hidden="true">→</span></a>
+      </div>
+      <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="bg-section">
+      <div class="section-container hero-contact">
+        <div class="hero-inner">
+          <span class="eyebrow">Get in touch</span>
+          <h1 class="display-72">Tell us about <span class="accent-phrase">your operation</span>.</h1>
+          <p class="body-17">No commitments. Just real numbers from real carriers — usually within one business day.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. FORM + INFO -->
+    <section class="bg-paper">
+      <div class="section-container form-block">
+        <div class="form-inner">
+
+          <!-- FORM -->
+          <div>
+            <div class="form-card">
+              <span class="eyebrow form-eyebrow">Request a quote</span>
+              <h2 class="display-28">We'll be in touch within one business day.</h2>
+
+              <form id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-field" data-field="name">
+                    <label for="field-name">Full name</label>
+                    <input id="field-name" name="name" type="text" autocomplete="name" required>
+                    <div class="form-error" role="alert"></div>
+                  </div>
+                  <div class="form-field" data-field="email">
+                    <label for="field-email">Business email</label>
+                    <input id="field-email" name="email" type="email" autocomplete="email" required>
+                    <div class="form-error" role="alert"></div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-field" data-field="phone">
+                    <label for="field-phone">Phone <span style="opacity:0.6">(optional)</span></label>
+                    <input id="field-phone" name="phone" type="tel" autocomplete="tel">
+                    <div class="form-error" role="alert"></div>
+                  </div>
+                  <div class="form-field" data-field="industry">
+                    <label for="field-industry">Industry</label>
+                    <select id="field-industry" name="industry" required>
+                      <option value="">Select an industry</option>
+                      <option value="healthcare">Healthcare</option>
+                      <option value="hospitality">Hospitality</option>
+                      <option value="multifamily">Multifamily</option>
+                      <option value="business">Business</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <div class="form-error" role="alert"></div>
+                  </div>
+                </div>
+
+                <div class="form-field" data-field="revenue">
+                  <label for="field-revenue">Annual revenue</label>
+                  <select id="field-revenue" name="revenue" required>
+                    <option value="">Select a range</option>
+                    <option value="lt1m">Under $1M</option>
+                    <option value="1m-5m">$1M – $5M</option>
+                    <option value="5m-25m">$5M – $25M</option>
+                    <option value="25m+">$25M+</option>
+                  </select>
+                  <div class="form-error" role="alert"></div>
+                </div>
+
+                <div class="form-field" data-field="message">
+                  <label for="field-message">Message <span style="opacity:0.6">(optional)</span></label>
+                  <textarea id="field-message" name="message" placeholder="Tell us about your operation and current coverage."></textarea>
+                  <div class="form-error" role="alert"></div>
+                </div>
+
+                <div class="form-submit">
+                  <button type="submit" class="btn btn-accent btn-block">Send request <span aria-hidden="true">→</span></button>
+                </div>
+
+                <p class="form-foot">We respond within one business day. No third-party data sharing.</p>
+              </form>
+            </div>
+
+            <div id="form-success" hidden>
+              <h3>Request received.</h3>
+              <p>Thanks — we'll come back to you with real options from real carriers within one business day.</p>
+            </div>
+          </div>
+
+          <!-- INFO PANEL -->
+          <aside class="info-panel" aria-label="Contact information">
+            <div class="info-block">
+              <span class="info-eyebrow">Office</span>
+              <p>Texas-based<br>Serving clients across the U.S.</p>
+            </div>
+            <div class="info-block">
+              <span class="info-eyebrow">Email</span>
+              <p><a href="mailto:hello@vantageriskadvisors.com">hello@vantageriskadvisors.com</a></p>
+            </div>
+            <div class="info-block">
+              <span class="info-eyebrow">Phone</span>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="info-block">
+              <span class="info-eyebrow">Industries we serve</span>
+              <div class="pill-row" style="margin-top:8px">
+                <a href="healthcare.html" class="pill">Healthcare</a>
+                <a href="hospitality.html" class="pill">Hospitality</a>
+                <a href="multifamily.html" class="pill">Multifamily</a>
+                <a href="business.html" class="pill">Business</a>
+              </div>
+            </div>
+            <div class="info-block">
+              <span class="info-eyebrow">Response time</span>
+              <p>Within 1 business day</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. REASSURANCE STRIP -->
+    <section class="bg-paper-alt">
+      <div class="section-container">
+        <div class="reassure-grid">
+          <div class="reassure-item">
+            <div class="r-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-7"/></svg>
+            </div>
+            <h3 class="display-22">No obligation.</h3>
+            <p class="body-14">Get quotes without committing to anything. Real numbers, no pressure.</p>
+          </div>
+          <div class="reassure-item">
+            <div class="r-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+            </div>
+            <h3 class="display-22">Multiple carriers.</h3>
+            <p class="body-14">We shop your risk across our full A-rated carrier panel — not a single house quote.</p>
+          </div>
+          <div class="reassure-item">
+            <div class="r-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <h3 class="display-22">Fast turnaround.</h3>
+            <p class="body-14">Most quotes back within 1–2 business days. We move at the speed of your renewal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Vantage Risk Advisors home">
+            <img src="assets/logo-white.svg" alt="Vantage Risk Advisors">
+          </a>
+          <p>Independent commercial insurance broker. Real carrier access. Specialist depth.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#team">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li><a href="hospitality.html">Hospitality</a></li>
+            <li><a href="multifamily.html">Multifamily</a></li>
+            <li><a href="business.html">Business</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="contact.html">Coverage Guides</a></li>
+            <li><a href="contact.html">Blog</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <div class="contact-line"><a href="mailto:hello@vantageriskadvisors.com">hello@vantageriskadvisors.com</a></div>
+          <div class="contact-line">+1 (555) 123-4567</div>
+          <div class="contact-line">Texas · Serving nationally</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Vantage Risk Advisors. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* Home page styles */
+
+/* ── 1. Hero ── */
+.hero-home {
+  padding-top: 120px;
+  padding-bottom: 96px;
+}
+.hero-home .hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--gap-l);
+  align-items: center;
+}
+.hero-home h1 { margin-bottom: 22px; }
+.hero-home .hero-sub { margin-bottom: 32px; max-width: 540px; }
+.hero-home .hero-buttons { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+.hero-home .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.hero-stats .stat {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-m);
+  padding: 22px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero-stats .stat .big-num { font-size: 36px; }
+.hero-stats .stat .stat-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.4;
+}
+
+/* ── 2. Sectors grid ── */
+.sectors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-m);
+}
+.sector-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sector-card .sector-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-s);
+  background: var(--accentSoft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.sector-card h3 { margin-bottom: 0; }
+.sector-card p { color: var(--inkSoft); }
+.sector-card .link-accent { margin-top: 12px; }
+
+/* ── 3. Why VRA — 3 col feature ── */
+.feature-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-l);
+}
+.feature-item .feature-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
+}
+.feature-item h3 { margin-bottom: 10px; }
+
+/* ── 4. Coverage stack ── */
+.coverage-cta-row { margin-top: 48px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ── 5. Industries strip ── */
+.industry-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+.industry-strip .industry-cell {
+  padding: 36px 28px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.industry-strip .industry-cell:last-child { border-right: 0; }
+.industry-strip .industry-cell h3 { margin-bottom: 0; }
+.industry-strip .industry-cell p { color: var(--inkSoft); }
+.industry-strip .industry-cell .link-accent { margin-top: auto; padding-top: 18px; }
+
+/* ── 6. Process — horizontal steps ── */
+.process-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-l);
+  position: relative;
+}
+.process-row::before {
+  content: '';
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  top: 22px;
+  height: 1px;
+  background: var(--line);
+  z-index: 0;
+}
+.process-step { position: relative; z-index: 1; background: var(--paperAlt); padding-right: 16px; }
+.process-step .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+.process-step h3 { margin-bottom: 10px; }
+.process-step p { color: var(--inkSoft); }
+
+/* ── 7. Contact CTA ── */
+.contact-cta { text-align: center; }
+.contact-cta h2 { margin: 0 auto 18px; max-width: 760px; }
+.contact-cta p  { margin: 0 auto 32px; max-width: 540px; }
+.contact-cta .cta-email {
+  display: block;
+  margin-top: 22px;
+  color: rgba(255,255,255,0.65);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.contact-cta .cta-email:hover { color: white; }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .hero-home .hero-inner   { grid-template-columns: 1fr; }
+  .industry-strip          { grid-template-columns: 1fr 1fr; }
+  .industry-strip .industry-cell:nth-child(2) { border-right: 0; }
+  .industry-strip .industry-cell:nth-child(1),
+  .industry-strip .industry-cell:nth-child(2) { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 900px) {
+  .feature-3col { grid-template-columns: 1fr; gap: 32px; }
+  .process-row  { grid-template-columns: 1fr; gap: 28px; }
+  .process-row::before { display: none; }
+}
+@media (max-width: 640px) {
+  .hero-home              { padding-top: 80px; padding-bottom: 64px; }
+  .sectors-grid           { grid-template-columns: 1fr; }
+  .industry-strip         { grid-template-columns: 1fr; }
+  .industry-strip .industry-cell { border-right: 0; border-bottom: 1px solid var(--line); }
+  .industry-strip .industry-cell:last-child { border-bottom: 0; }
+  .hero-stats             { grid-template-columns: 1fr; }
+}

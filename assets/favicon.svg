@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="VRA">
+  <rect width="32" height="32" rx="6" fill="#0B1B33"/>
+  <text x="16" y="22" text-anchor="middle"
+        font-family="'Bricolage Grotesque', system-ui, sans-serif"
+        font-weight="700" font-size="16"
+        letter-spacing="-0.04em" fill="#FFFFFF">VRA</text>
+  <rect x="6" y="25" width="20" height="2" fill="#2D5CF5" rx="1"/>
+</svg>

@@ -1,0 +1,37 @@
+/* VRA Design System — Tokens
+   Single source of truth for colors, spacing, radius, and layout values.
+   Type scale is defined in base.css. */
+
+:root {
+  /* Colors */
+  --ink:         #111418;
+  --inkSoft:     #374151;
+  --inkSection:  #0B1B33;
+  --inkDeep:     #06122A;
+  --paper:       #FBFAF6;
+  --paperAlt:    #EEEDE8;
+  --paperDeep:   #E5E3DC;
+  --accent:      #2D5CF5;
+  --accentSoft:  #DDE5FE;
+  --muted:       #6B7280;
+  --line:        #E2E1DA;
+  --onAccent:    #FFFFFF;
+
+  /* Radius */
+  --radius-s:    6px;
+  --radius-m:    12px;
+  --radius-l:    20px;
+
+  /* Gaps */
+  --gap-s:       14px;
+  --gap-m:       22px;
+  --gap-l:       52px;
+
+  /* Section padding & page width */
+  --section-v:   96px;
+  --section-h:   56px;
+  --page-max:    1440px;
+
+  /* Nav height (used to offset sticky elements / hero spacing) */
+  --nav-h:       64px;
+}
