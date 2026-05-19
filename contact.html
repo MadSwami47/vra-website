@@ -54,115 +54,100 @@
 
           <!-- LEFT: heading + contact info -->
           <div class="contact-side">
-            <span class="eyebrow">Get in touch</span>
+            <span class="eyebrow">Contact</span>
             <h1 class="display-72">Let's <span class="accent-phrase">talk.</span></h1>
-            <p class="body-17 contact-lead">Reach out to coordinate a conversation that fits your situation. No obligation, no pitches — we'll come back with real carrier options, usually within one business day.</p>
+            <p class="body-17 contact-lead">Reach out to coordinate a preliminary risk analysis before our first call — no obligation, just expert guidance. We respond within one business day.</p>
 
-            <div class="contact-direct">
-              <a href="mailto:hello@vantageriskadvisors.com">hello@vantageriskadvisors.com</a>
-              <a href="tel:+15551234567">+1 (555) 123-4567</a>
+            <div class="contact-divider"></div>
+
+            <div class="contact-block">
+              <span class="contact-block-eyebrow">Email</span>
+              <a href="mailto:vipul@vantageriskadvisors.com" class="contact-block-value">vipul@vantageriskadvisors.com</a>
+            </div>
+
+            <div class="contact-block">
+              <span class="contact-block-eyebrow">Phone</span>
+              <a href="tel:+15551234567" class="contact-block-value">+1 (555) 123-4567</a>
             </div>
           </div>
 
           <!-- RIGHT: dark form panel -->
           <aside class="contact-form-panel" aria-label="Request a quote">
-            <span class="form-eyebrow">Request a quote</span>
-            <p class="form-intro">Tell us about your operation and we'll be in touch within one business day.</p>
+            <h2 class="form-title">Request a quote</h2>
+            <p class="form-intro">Provide your details and an advisor will perform a preliminary risk analysis before our first call.</p>
 
             <form id="contact-form" novalidate>
               <div class="form-row">
-                <div class="form-field" data-field="name">
-                  <label for="field-name">Full name</label>
-                  <input id="field-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                <div class="form-field" data-field="business">
+                  <label for="field-business">Business name <span class="req">*</span></label>
+                  <input id="field-business" name="business" type="text" placeholder="e.g. Sunrise Inn" required>
                   <div class="form-error" role="alert"></div>
                 </div>
-                <div class="form-field" data-field="email">
-                  <label for="field-email">Business email</label>
-                  <input id="field-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+                <div class="form-field" data-field="name">
+                  <label for="field-name">Contact name <span class="req">*</span></label>
+                  <input id="field-name" name="name" type="text" autocomplete="name" placeholder="Full name" required>
                   <div class="form-error" role="alert"></div>
                 </div>
               </div>
 
               <div class="form-row">
-                <div class="form-field" data-field="phone">
-                  <label for="field-phone">Phone <span style="opacity:0.6">(optional)</span></label>
-                  <input id="field-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567">
+                <div class="form-field" data-field="email">
+                  <label for="field-email">Email address <span class="req">*</span></label>
+                  <input id="field-email" name="email" type="email" autocomplete="email" placeholder="you@business.com" required>
                   <div class="form-error" role="alert"></div>
                 </div>
-                <div class="form-field" data-field="industry">
-                  <label for="field-industry">Industry</label>
-                  <select id="field-industry" name="industry" required>
-                    <option value="">Select an industry</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="hospitality">Hospitality</option>
-                    <option value="multifamily">Multifamily</option>
-                    <option value="business">Business</option>
-                    <option value="other">Other</option>
-                  </select>
+                <div class="form-field" data-field="phone">
+                  <label for="field-phone">Phone <span class="req">*</span></label>
+                  <input id="field-phone" name="phone" type="tel" autocomplete="tel" placeholder="(___) ___-____" required>
                   <div class="form-error" role="alert"></div>
                 </div>
               </div>
 
-              <div class="form-field" data-field="revenue">
-                <label for="field-revenue">Annual revenue</label>
-                <select id="field-revenue" name="revenue" required>
-                  <option value="">Select a range</option>
-                  <option value="lt1m">Under $1M</option>
-                  <option value="1m-5m">$1M – $5M</option>
-                  <option value="5m-25m">$5M – $25M</option>
-                  <option value="25m+">$25M+</option>
+              <div class="form-field" data-field="industry">
+                <label for="field-industry">Business type / industry <span class="req">*</span></label>
+                <select id="field-industry" name="industry" required>
+                  <option value="">Choose an industry…</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="hospitality">Hospitality</option>
+                  <option value="multifamily">Multifamily &amp; HOA</option>
+                  <option value="business">Business Insurance</option>
+                  <option value="other">Something else</option>
                 </select>
                 <div class="form-error" role="alert"></div>
               </div>
 
+              <div class="form-row">
+                <div class="form-field" data-field="carrier">
+                  <label for="field-carrier">Current carrier</label>
+                  <input id="field-carrier" name="carrier" type="text" placeholder="Carrier name">
+                  <div class="form-error" role="alert"></div>
+                </div>
+                <div class="form-field" data-field="renewal">
+                  <label for="field-renewal">Policy expiration</label>
+                  <input id="field-renewal" name="renewal" type="text" placeholder="MM / DD / YYYY">
+                  <div class="form-error" role="alert"></div>
+                </div>
+              </div>
+
               <div class="form-field" data-field="message">
-                <label for="field-message">Message <span style="opacity:0.6">(optional)</span></label>
-                <textarea id="field-message" name="message" placeholder="Tell us about your operation and current coverage."></textarea>
+                <label for="field-message">Additional notes</label>
+                <textarea id="field-message" name="message" placeholder="Tell us anything specific about your operation, exposures, or what you are hoping to improve."></textarea>
                 <div class="form-error" role="alert"></div>
               </div>
 
               <div class="form-submit">
-                <button type="submit" class="btn btn-accent btn-block">Send the request <span aria-hidden="true">→</span></button>
+                <button type="submit" class="btn btn-accent btn-block">Send my request <span aria-hidden="true">→</span></button>
               </div>
 
-              <p class="form-foot">We'll respond within one business day. No third-party data sharing.</p>
+              <p class="form-foot">We respond within one business day · No obligation · Your data stays with VRA</p>
             </form>
 
             <div id="form-success" hidden>
               <h3>Request received.</h3>
-              <p>Thanks — we'll come back with real options from real carriers within one business day.</p>
+              <p>Thanks — an advisor will be in touch within one business day.</p>
             </div>
           </aside>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. REASSURANCE STRIP -->
-    <section class="bg-paper-alt">
-      <div class="section-container">
-        <div class="reassure-grid">
-          <div class="reassure-item">
-            <div class="r-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-7"/></svg>
-            </div>
-            <h3 class="display-22">No obligation.</h3>
-            <p class="body-14">Get quotes without committing to anything. Real numbers, no pressure.</p>
-          </div>
-          <div class="reassure-item">
-            <div class="r-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-            </div>
-            <h3 class="display-22">Multiple carriers.</h3>
-            <p class="body-14">We shop your risk across our full A-rated carrier panel — not a single house quote.</p>
-          </div>
-          <div class="reassure-item">
-            <div class="r-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-            </div>
-            <h3 class="display-22">Fast turnaround.</h3>
-            <p class="body-14">Most quotes back within 1–2 business days. We move at the speed of your renewal.</p>
-          </div>
         </div>
       </div>
     </section>

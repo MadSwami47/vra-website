@@ -1,204 +1,227 @@
-/* About page styles */
+/* About page — 5 sections matching screenshot */
 
+/* ── 1. Hero (light) ── */
 .hero-about {
-  padding-top: 120px;
+  padding-top: 80px;
+  padding-bottom: 64px;
+}
+.hero-about .hero-inner {
+  max-width: 760px;
+}
+.hero-about h1 {
+  margin-bottom: 28px;
+  font-size: 72px;
+  line-height: 1.05;
+}
+.hero-about h1 .accent-phrase {
+  color: var(--accent);
+  display: block;
+}
+.hero-about .hero-lead {
+  color: var(--inkSoft);
+  max-width: 560px;
+}
+
+/* ── 2. Why we exist (light, 2-col) ── */
+.exist-section {
+  padding-top: 32px;
   padding-bottom: 96px;
 }
-.hero-about h1 { margin-bottom: 28px; max-width: 920px; }
-.hero-about h1 .accent-phrase { color: var(--accent); }
-.hero-about .hero-body {
+.exist-inner {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: var(--gap-l);
-  align-items: start;
-  margin-top: 32px;
-}
-.hero-about .hero-body .lead { font-size: 19px; line-height: 1.5; color: var(--ink); font-weight: 500; }
-.hero-about .hero-body .body p + p { margin-top: 16px; }
-.hero-about .hero-body .body p { color: var(--inkSoft); }
-
-/* Mission / pull-quote */
-.mission-block .mission-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: var(--gap-l);
   align-items: start;
 }
-.mission-block .mission-quote {
+.exist-left h2 {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 600;
-  font-size: 38px;
+  font-size: 30px;
+  color: var(--ink);
+  letter-spacing: -0.015em;
   line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: white;
 }
-.mission-block .mission-quote .accent-phrase { color: var(--accent); }
-.mission-block .mission-body p { margin-bottom: 18px; color: rgba(255,255,255,0.70); }
+.exist-left h2 .accent-phrase { color: var(--accent); }
+.exist-body p {
+  color: var(--inkSoft);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.exist-body p:last-child { margin-bottom: 0; }
 
-/* Principles 4-col */
+/* ── 3. Four principles (dark) ── */
+.principles-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.principles-section h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.principles-section .principles-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  margin-bottom: 48px;
+  max-width: 460px;
+}
 .principles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap-m);
+  gap: 16px;
 }
 .principle-card {
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius-m);
-  padding: 24px;
+  padding: 28px 24px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
 }
-.principle-card .p-icon {
-  width: 36px;
-  height: 36px;
+.principle-card .pc-num {
+  width: 30px;
+  height: 30px;
   border-radius: var(--radius-s);
-  background: rgba(45, 92, 245, 0.18);
-  color: var(--accent);
+  background: var(--accent);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  margin-bottom: 22px;
 }
 .principle-card h3 {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 600;
   font-size: 18px;
   color: white;
-  margin-bottom: 8px;
   letter-spacing: -0.01em;
+  margin-bottom: 10px;
 }
 .principle-card p {
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 13px;
+  line-height: 1.55;
   color: rgba(255,255,255,0.65);
-  line-height: 1.5;
 }
 
-/* Independent vs captive compare */
+/* ── 4. Independent vs captive (light, 2-col compare) ── */
+.compare-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
 .compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap-l);
 }
-.compare .compare-col h3 {
+.compare-col h3 {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 600;
-  font-size: 24px;
-  margin-bottom: 22px;
-  letter-spacing: -0.01em;
+  font-size: 30px;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 32px;
+  margin-top: 8px;
 }
-.compare .compare-col .col-eyebrow {
+.compare-col .col-eyebrow {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  display: block;
 }
-.compare .col-good .col-eyebrow { color: var(--accent); }
-.compare .col-bad  .col-eyebrow { color: var(--muted); }
-.compare .compare-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-.compare .compare-col li {
+.col-good .col-eyebrow { color: var(--accent); }
+.col-bad  .col-eyebrow { color: var(--muted); }
+
+.compare-col ul {
+  list-style: none;
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  flex-direction: column;
+  gap: 0;
+}
+.compare-col li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: var(--ink);
 }
-.compare .col-good .mark { color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
-.compare .col-bad  .mark { color: var(--muted);  font-weight: 700; flex-shrink: 0; margin-top: 2px; }
-
-/* Team grid */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-m);
-}
-.team-card { padding: 28px; }
-.team-card .avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--paperAlt);
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 600;
-  font-size: 28px;
+.compare-col li:last-child { border-bottom: 1px solid var(--line); }
+.col-good .mark {
   color: var(--accent);
-  letter-spacing: -0.02em;
-  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
 }
-.team-card .role {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  margin-bottom: 10px;
-  margin-top: 4px;
-  display: block;
+.col-bad .mark {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 14px;
+  flex-shrink: 0;
 }
-.team-card h3 { margin-bottom: 8px; }
-.team-card p { color: var(--inkSoft); }
-
-/* Stats row */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap-l);
-}
-.stat-block .big-num { font-size: 64px; margin-bottom: 12px; line-height: 1; }
-.stat-block .stat-label { font-family: 'Hanken Grotesk', sans-serif; font-size: 14px; color: var(--inkSoft); line-height: 1.5; max-width: 220px; }
-
-/* Sectors reuse */
-.sectors-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap-m);
-}
-.sector-card { display: flex; flex-direction: column; gap: 14px; }
-.sector-card .sector-icon {
-  width: 44px; height: 44px;
-  border-radius: var(--radius-s);
-  background: var(--accentSoft); color: var(--accent);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 6px;
+.col-bad li .item-text {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(107, 114, 128, 0.5);
 }
 
-/* Contact CTA reused */
-.contact-cta { text-align: center; }
-.contact-cta h2 { margin: 0 auto 18px; max-width: 760px; }
-.contact-cta p  { margin: 0 auto 32px; max-width: 540px; }
-.contact-cta .cta-email {
-  display: block;
-  margin-top: 22px;
-  color: rgba(255,255,255,0.65);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  letter-spacing: 0.04em;
+/* ── 5. Final CTA banner (dark) ── */
+.final-cta {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.contact-cta .cta-email:hover { color: white; }
+.final-cta .eyebrow { margin-bottom: 18px; }
+.final-cta h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 auto 22px;
+  max-width: 760px;
+}
+.final-cta h2 .accent-phrase { color: var(--accent); display: block; }
+.final-cta p {
+  color: rgba(255,255,255,0.70);
+  font-size: 16px;
+  margin: 0 auto 32px;
+  max-width: 460px;
+  line-height: 1.55;
+}
 
-/* Responsive */
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .hero-about h1 { font-size: 56px; }
+  .principles-section h2 { font-size: 36px; }
+  .compare-col h3 { font-size: 26px; }
+  .final-cta h2 { font-size: 40px; }
+}
 @media (max-width: 1100px) {
-  .hero-about .hero-body { grid-template-columns: 1fr; }
-  .mission-block .mission-inner { grid-template-columns: 1fr; }
   .principles { grid-template-columns: 1fr 1fr; }
+  .exist-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 900px) {
+  .hero-about h1 { font-size: 44px; }
   .compare { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: 1fr 1fr; }
-  .stats-row { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .mission-block .mission-quote { font-size: 30px; }
+  .exist-left h2 { font-size: 24px; }
 }
 @media (max-width: 640px) {
-  .hero-about { padding-top: 80px; padding-bottom: 64px; }
-  .principles { grid-template-columns: 1fr; }
-  .team-grid  { grid-template-columns: 1fr; }
-  .stats-row  { grid-template-columns: 1fr; }
-  .sectors-grid { grid-template-columns: 1fr; }
-  .stat-block .big-num { font-size: 48px; }
+  .hero-about     { padding-top: 56px; padding-bottom: 48px; }
+  .exist-section,
+  .principles-section,
+  .compare-section { padding-top: 64px; padding-bottom: 64px; }
+  .hero-about h1  { font-size: 36px; }
+  .principles     { grid-template-columns: 1fr; }
+  .final-cta h2   { font-size: 28px; }
 }

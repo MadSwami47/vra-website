@@ -3,15 +3,18 @@
   if (!form) return;
 
   const fields = [
+    { name: 'business', required: true,  test: (v) => v.trim().length >= 2,
+      msg: 'Please enter your business name.' },
     { name: 'name',     required: true,  test: (v) => v.trim().length >= 2,
       msg: 'Please enter your full name.' },
     { name: 'email',    required: true,  test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
-      msg: 'Please enter a valid business email.' },
-    { name: 'phone',    required: false, test: () => true, msg: '' },
+      msg: 'Please enter a valid email address.' },
+    { name: 'phone',    required: true,  test: (v) => v.trim().length >= 7,
+      msg: 'Please enter your phone number.' },
     { name: 'industry', required: true,  test: (v) => v && v !== '',
-      msg: 'Please select an industry.' },
-    { name: 'revenue',  required: true,  test: (v) => v && v !== '',
-      msg: 'Please select a revenue range.' },
+      msg: 'Please select a business type.' },
+    { name: 'carrier',  required: false, test: () => true, msg: '' },
+    { name: 'renewal',  required: false, test: () => true, msg: '' },
     { name: 'message',  required: false, test: () => true, msg: '' },
   ];
 
@@ -56,7 +59,6 @@
     });
     if (!ok) return;
 
-    // Phase 2: real submission. For now, show success state.
     const success = document.getElementById('form-success');
     if (success) {
       form.style.display = 'none';
