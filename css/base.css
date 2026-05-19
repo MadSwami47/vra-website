@@ -105,6 +105,7 @@ button { font: inherit; cursor: pointer; }
 .btn:hover  { opacity: 0.88; transform: translateY(-1px); }
 .btn:active { transform: translateY(0); }
 .btn-primary { background: var(--ink); color: var(--paper); }
+.btn-dark    { background: var(--ink); color: var(--paper); }
 .btn-accent  { background: var(--accent); color: var(--onAccent); }
 .btn-ghost   { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn-ghost-white {

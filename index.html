@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vantage Risk Advisors — Commercial insurance built around your business.</title>
+  <title>Vantage Risk Advisors — Insurance built around your business.</title>
   <meta name="description" content="Independent commercial insurance broker representing multiple A-rated carriers for healthcare, hospitality, multifamily, and business operations.">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -19,23 +19,28 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Vantage Risk Advisors home">
-        <img src="assets/logo-dark.svg" alt="Vantage Risk Advisors">
+      <a href="index.html" class="brand" aria-label="Vantage Risk Advisors home">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-text">
+          <strong>Vantage Risk Advisors</strong>
+          <em>Independent · Insurance</em>
+        </span>
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="healthcare.html">Healthcare</a></li>
-          <li><a href="hospitality.html">Hospitality</a></li>
-          <li><a href="multifamily.html">Multifamily</a></li>
-          <li><a href="business.html">Business</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="healthcare.html">Coverage</a></li>
+          <li><a href="#sectors">Who we serve <span class="caret">▾</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-accent">Get a quote <span aria-hidden="true">→</span></a>
+      <div class="nav-right">
+        <a href="tel:+15551234567" class="nav-phone">+1 (555) 123-4567</a>
+        <a href="contact.html" class="btn btn-dark">Get a quote</a>
       </div>
       <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
     </div>
@@ -47,188 +52,286 @@
     <section class="bg-paper">
       <div class="section-container hero-home">
         <div class="hero-inner">
-          <span class="eyebrow">Vantage Risk Advisors · Commercial Insurance</span>
+          <span class="eyebrow">Independent Insurance Advisory</span>
           <h1 class="display-72">Insurance built <span class="accent-phrase">around your business.</span></h1>
-          <p class="body-17 hero-sub">Vantage Risk Advisors represents multiple A-rated carriers — so you get real options, not a sales pitch.</p>
+          <p class="body-17 hero-sub">Vantage Risk Advisors represents multiple A-rated carriers — so you get real options, not a sales pitch. Specialist coverage for owners who think long-term.</p>
           <div class="hero-buttons">
-            <a href="contact.html" class="btn btn-primary">Request a quote <span aria-hidden="true">→</span></a>
-            <a href="about.html" class="btn btn-ghost">See our process</a>
+            <a href="contact.html" class="btn btn-dark">Get a quote <span aria-hidden="true">→</span></a>
+            <a href="#how" class="btn btn-ghost">How we work</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. FOUR SECTORS -->
-    <section class="bg-section">
+    <!-- 2. SPECIALISTS ACROSS FOUR SECTORS (dark, 4-col) -->
+    <section id="sectors" class="bg-section sectors-section">
       <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">What we cover</span>
-          <h2 class="display-48">Specialists across <span class="accent-phrase">four sectors.</span></h2>
-          <p class="body-17">We build coverage programs for industries with real complexity — where off-the-shelf policies leave dangerous gaps.</p>
+        <div class="section-header-row">
+          <div class="col-head">
+            <span class="eyebrow">Insurance brokers · Who we serve</span>
+            <h2 class="display-48">Specialists across four sectors.</h2>
+          </div>
+          <div class="col-desc">
+            <p class="body-17">Healthcare, hospitality, multifamily and HOA, and business insurance — we build programs around your specific liabilities, not a template. Commercial auto is included within the business insurance.</p>
+          </div>
         </div>
 
         <div class="sectors-grid">
           <a href="healthcare.html" class="sector-tile">
-            <div class="sector-tile-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.65-7 10-7 10z"/><path d="M12 8v6M9 11h6"/></svg>
-            </div>
+            <div class="sector-tile-num">01</div>
             <h3 class="sector-tile-title">Healthcare</h3>
-            <p class="sector-tile-body">Malpractice, license defense, premises, and HIPAA cyber — built around the specialty you actually practice.</p>
-            <span class="sector-tile-link">Explore healthcare <span class="arrow">→</span></span>
+            <div class="sector-tile-meta">Physicians, dentists, CRNAs, allied health</div>
+            <p class="sector-tile-body">Practices and clinics — malpractice paired with the full business stack for licensed professionals.</p>
+            <span class="sector-tile-link">More →</span>
           </a>
 
           <a href="hospitality.html" class="sector-tile">
-            <div class="sector-tile-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M10 21v-6h4v6"/></svg>
-            </div>
+            <div class="sector-tile-num">02</div>
             <h3 class="sector-tile-title">Hospitality</h3>
-            <p class="sector-tile-body">Property and BI, liquor, POS breach, and the seasonal-staff comp programs hotels and restaurants actually need.</p>
-            <span class="sector-tile-link">Explore hospitality <span class="arrow">→</span></span>
+            <div class="sector-tile-meta">Hotels, motels, lodging</div>
+            <p class="sector-tile-body">Coverage for full-service hotels, motels, B&amp;Bs, and extended-stay properties. Property, BI, guest claims, cyber.</p>
+            <span class="sector-tile-link">More →</span>
           </a>
 
           <a href="multifamily.html" class="sector-tile">
-            <div class="sector-tile-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6M3 21h18"/></svg>
-            </div>
+            <div class="sector-tile-num">03</div>
             <h3 class="sector-tile-title">Multifamily &amp; HOA</h3>
-            <p class="sector-tile-body">Property, GL, umbrella, and D&amp;O sized for what lenders and institutional equity actually require.</p>
-            <span class="sector-tile-link">Explore multifamily <span class="arrow">→</span></span>
+            <div class="sector-tile-meta">Apartments and HOA boards</div>
+            <p class="sector-tile-body">Programs for landlords with multi-tenant buildings, fair-housing, fidelity, loss of rents, and D&amp;O for boards.</p>
+            <span class="sector-tile-link">More →</span>
           </a>
 
           <a href="business.html" class="sector-tile">
-            <div class="sector-tile-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>
-            </div>
+            <div class="sector-tile-num">04</div>
             <h3 class="sector-tile-title">Business Insurance</h3>
-            <p class="sector-tile-body">Property, GL, cyber, EPLI, and D&amp;O programs for small to mid-market operations that demand more than a BOP.</p>
-            <span class="sector-tile-link">Explore business <span class="arrow">→</span></span>
+            <div class="sector-tile-meta">All businesses, including commercial auto</div>
+            <p class="sector-tile-body">Customized commercial packages built around your operation — property, GL, workers comp, commercial auto and the rest of the stack.</p>
+            <span class="sector-tile-link">More →</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- 3. WHY VRA -->
-    <section class="bg-paper-alt">
+    <!-- 3. OUR MISSION (light) -->
+    <section class="bg-paper mission-section">
       <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">Why VRA</span>
-          <h2 class="display-48">Not a captive. Not a call center.</h2>
-          <p class="body-17">Independent brokers representing dozens of carriers. That means we shop your risk, not sell a product.</p>
-        </div>
+        <div class="mission-inner">
 
-        <div class="feature-3col">
-          <div class="feature-item">
-            <div class="feature-num">01 · Carrier access</div>
-            <h3 class="display-22">Multiple A-rated markets per line.</h3>
-            <p class="body-14">We quote your program across our carrier panel — not a single house brand. That's how you get real comparison.</p>
+          <div class="mission-quadrant">
+            <div class="mission-card">
+              <div class="mc-num">01</div>
+              <h3>Independent</h3>
+              <p>Free to recommend what fits — across the carriers we partner with.</p>
+            </div>
+            <div class="mission-card">
+              <div class="mc-num">02</div>
+              <h3>Attentive</h3>
+              <p>Annual renewal benchmarking. Always.</p>
+            </div>
+            <div class="mission-card">
+              <div class="mc-num">03</div>
+              <h3>Transparent</h3>
+              <p>Plain-English quotes. We explain what you have and how to use it.</p>
+            </div>
+            <div class="mission-card">
+              <div class="mc-num">04</div>
+              <h3>Specialist</h3>
+              <p>Backed by underwriters and brokers who understand your industry.</p>
+            </div>
           </div>
-          <div class="feature-item">
-            <div class="feature-num">02 · Industry depth</div>
-            <h3 class="display-22">Specialists, not generalists.</h3>
-            <p class="body-14">Four verticals, each with their own coverage stack and claim patterns. You're not getting a retail BOP.</p>
+
+          <div class="mission-body">
+            <span class="eyebrow">Our mission</span>
+            <h2 class="display-48">Insurance that <span class="accent-phrase">pays attention.</span></h2>
+            <p>We help business owners and professionals find insurance that actually fits — including malpractice and professional liability. We are independent, we work with top-rated insurance companies, and we put real options in front of you.</p>
+            <p>Too many owners and professionals are paying for insurance that does not fit them anymore — extras they do not need, or gaps that could hurt them if something went wrong. The reason is usually simple: their agent has stopped paying attention. We were built to do the opposite.</p>
+            <a href="about.html" class="btn btn-ghost">Read our mission</a>
           </div>
-          <div class="feature-item">
-            <div class="feature-num">03 · Claims advocacy</div>
-            <h3 class="display-22">In your corner when it counts.</h3>
-            <p class="body-14">We don't disappear after binding. When the claim is filed, we're the ones pushing the carrier to pay it.</p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MOST SPECIALIZED COVERAGE (dark) -->
+    <section class="bg-section gaps-section">
+      <div class="section-container">
+        <div class="gaps-inner">
+          <div class="gaps-left">
+            <span class="eyebrow">Most specialized coverage</span>
+            <h2 class="display-48">Most policies miss the risks that matter most.</h2>
+            <p>A standard package built for the local diner is not going to cover a clinic, or a multifamily portfolio. We design programs that protect the building, cover the work world, the cost of cyber, and replace lost income when an event slows you down.</p>
+            <div class="gaps-pills">
+              <span class="pill">Property + Business Interruption</span>
+              <span class="pill">General Liability</span>
+              <span class="pill">Liquor + professional</span>
+              <span class="pill">Cyber &amp; risks</span>
+              <span class="pill">Workers comp</span>
+              <span class="pill">Umbrella &amp; excess</span>
+            </div>
+          </div>
+
+          <div class="gaps-card">
+            <h3>Common gaps we close</h3>
+            <ul class="gaps-list">
+              <li>
+                <span class="gap-mark">▸</span>
+                <span class="gap-content">
+                  <strong>Slip + fall</strong>
+                  <span>Owned and customer-injury claims coverage gaps.</span>
+                </span>
+              </li>
+              <li>
+                <span class="gap-mark">▸</span>
+                <span class="gap-content">
+                  <strong>Storm &amp; weather</strong>
+                  <span>Business-interruption coverage gaps when peril losses extend.</span>
+                </span>
+              </li>
+              <li>
+                <span class="gap-mark">▸</span>
+                <span class="gap-content">
+                  <strong>Liquor service</strong>
+                  <span>Dram-shop claims tied to alcohol service — a separate trigger.</span>
+                </span>
+              </li>
+              <li>
+                <span class="gap-mark">▸</span>
+                <span class="gap-content">
+                  <strong>Cyber / PCI</strong>
+                  <span>Point-of-sale systems are a card-data target.</span>
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. COVERAGE STACK -->
+    <!-- 5. THE VANTAGE DIFFERENCE (light) -->
+    <section class="bg-paper difference-section">
+      <div class="section-container">
+        <span class="eyebrow">Why VRA</span>
+        <h2 class="display-48">The Vantage difference.</h2>
+
+        <div class="difference-grid">
+          <div class="difference-card">
+            <div class="dc-num">01</div>
+            <div>
+              <h3>Independent advice</h3>
+              <p>We work for you, not the carriers. Every recommendation is on your side.</p>
+            </div>
+          </div>
+          <div class="difference-card">
+            <div class="dc-num">02</div>
+            <div>
+              <h3>Personal attention</h3>
+              <p>Same advisor at first contact, renewal, and claim. One name, one number.</p>
+            </div>
+          </div>
+          <div class="difference-card">
+            <div class="dc-num">03</div>
+            <div>
+              <h3>Modern process</h3>
+              <p>We quote in days, not weeks. No fax machines. Quotes in days, not weeks. Digital end-to-end.</p>
+            </div>
+          </div>
+          <div class="difference-card">
+            <div class="dc-num">04</div>
+            <div>
+              <h3>Specialist coverage</h3>
+              <p>Deep expertise in hospitality, healthcare, multifamily, and small business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. THREE STEPS (dark) -->
+    <section id="how" class="bg-section process-section">
+      <div class="section-container">
+        <span class="eyebrow">How it works</span>
+        <h2 class="display-48">Three steps from form to bound policy.</h2>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="ps-num">01</div>
+            <h3>Tell us about your business</h3>
+            <p>60-second form, followed by a 20-minute call to understand your operation and exposures.</p>
+          </div>
+          <div class="process-step">
+            <div class="ps-num">02</div>
+            <h3>We shop and analyze</h3>
+            <p>We pull quotes from multiple A-rated carriers and benchmark side-by-side on claim clauses.</p>
+          </div>
+          <div class="process-step">
+            <div class="ps-num">03</div>
+            <h3>You pick the right fit</h3>
+            <p>Plain-English comparison. Pick the policy when you are ready — no pressure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. INLINE FORM (light) -->
+    <section class="bg-paper intake-section">
+      <div class="section-container">
+        <div class="intake-inner">
+          <div class="intake-left">
+            <span class="eyebrow">Want in?</span>
+            <h2 class="display-48">Know what you need? <span class="accent-phrase">Tell us.</span></h2>
+            <p>Skip the menu. Drop in your details and we'll be back within one business day with options for your business.</p>
+          </div>
+
+          <div class="intake-card">
+            <form id="intake-form" novalidate>
+              <div class="intake-row">
+                <div class="intake-field">
+                  <label for="intake-name">Name</label>
+                  <input id="intake-name" name="name" type="text" placeholder="Your full name" required>
+                </div>
+                <div class="intake-field">
+                  <label for="intake-business">Business</label>
+                  <input id="intake-business" name="business" type="text" placeholder="Business name">
+                </div>
+              </div>
+              <div class="intake-row">
+                <div class="intake-field">
+                  <label for="intake-email">Email</label>
+                  <input id="intake-email" name="email" type="email" placeholder="you@business.com" required>
+                </div>
+                <div class="intake-field">
+                  <label for="intake-phone">Phone</label>
+                  <input id="intake-phone" name="phone" type="tel" placeholder="(___) ___-____">
+                </div>
+              </div>
+              <div class="intake-field">
+                <label for="intake-need">What do you need?</label>
+                <select id="intake-need" name="need" required>
+                  <option value="">Choose an industry…</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="hospitality">Hospitality</option>
+                  <option value="multifamily">Multifamily &amp; HOA</option>
+                  <option value="business">Business Insurance</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div class="intake-submit">
+                <button type="submit" class="btn btn-accent">Send <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="intake-foot">No spam, ever — within one business day · No obligation.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FINAL CTA BANNER (dark) -->
     <section class="bg-section">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">The coverage stack</span>
-          <h2 class="display-48">Built line by line. Nothing missed.</h2>
-          <p class="body-17">A real commercial program is eight to twelve coordinated policies. We map yours end-to-end so nothing sits between the lines.</p>
-        </div>
-
-        <div class="tile-grid">
-          <div class="tile"><div class="tile-num">01</div><h4>Property &amp; BI</h4><p>Building, contents, and business-interruption coverage when operations stop.</p></div>
-          <div class="tile"><div class="tile-num">02</div><h4>General Liability</h4><p>Third-party bodily injury and property-damage claims — the foundation line.</p></div>
-          <div class="tile"><div class="tile-num">03</div><h4>Cyber &amp; Data</h4><p>Breach response, ransomware, regulatory notification, and first-party loss.</p></div>
-          <div class="tile"><div class="tile-num">04</div><h4>Umbrella &amp; Excess</h4><p>Additional limits sitting above GL, auto, and employer's liability.</p></div>
-          <div class="tile"><div class="tile-num">05</div><h4>Workers Comp</h4><p>State-required coverage priced to your real payroll and class codes.</p></div>
-          <div class="tile"><div class="tile-num">06</div><h4>Commercial Auto</h4><p>Owned, non-owned, and hired-vehicle exposure across your fleet.</p></div>
-          <div class="tile"><div class="tile-num">07</div><h4>EPLI</h4><p>Wrongful termination, discrimination, harassment, and wage-hour claims.</p></div>
-          <div class="tile"><div class="tile-num">08</div><h4>Specialty Lines</h4><p>Industry-specific lines — liquor, malpractice, fidelity, D&amp;O, and more.</p></div>
-        </div>
-
-        <div class="coverage-cta-row">
-          <a href="contact.html" class="btn btn-accent">Build your coverage program <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. INDUSTRIES STRIP -->
-    <section class="bg-paper">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">By industry</span>
-          <h2 class="display-48">Find the right insurance for the way you actually do business.</h2>
-        </div>
-        <div class="industry-strip">
-          <div class="industry-cell">
-            <h3 class="display-22">Healthcare</h3>
-            <p class="body-14">Physicians, dentists, CRNAs, allied health, and behavioral practices.</p>
-            <a href="healthcare.html" class="link-accent">Learn more <span class="arrow">→</span></a>
-          </div>
-          <div class="industry-cell">
-            <h3 class="display-22">Hospitality</h3>
-            <p class="body-14">Hotels, restaurants, bars, event venues, and catering operations.</p>
-            <a href="hospitality.html" class="link-accent">Learn more <span class="arrow">→</span></a>
-          </div>
-          <div class="industry-cell">
-            <h3 class="display-22">Multifamily</h3>
-            <p class="body-14">Apartment complexes, HOAs, mixed-use, student, and senior housing.</p>
-            <a href="multifamily.html" class="link-accent">Learn more <span class="arrow">→</span></a>
-          </div>
-          <div class="industry-cell">
-            <h3 class="display-22">Business</h3>
-            <p class="body-14">Professional services, contractors, retail, tech, and nonprofits.</p>
-            <a href="business.html" class="link-accent">Learn more <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. PROCESS -->
-    <section class="bg-paper-alt">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">How it works</span>
-          <h2 class="display-48">From first call to bound policy.</h2>
-        </div>
-
-        <div class="process-row">
-          <div class="process-step">
-            <div class="step-num">01</div>
-            <h3 class="display-22">Tell us about your operation.</h3>
-            <p class="body-14">A short call to map your exposure — what you do, who you employ, and where the real risk sits.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-num">02</div>
-            <h3 class="display-22">We shop your program.</h3>
-            <p class="body-14">Your risk goes out to the carriers most likely to write it well — not a single house quote.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-num">03</div>
-            <h3 class="display-22">You see real options.</h3>
-            <p class="body-14">Side-by-side quotes with the coverage, limits, and premium spelled out. You decide.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. CONTACT CTA -->
-    <section class="bg-section">
-      <div class="section-container contact-cta">
-        <h2 class="display-48">Ready to see real options?</h2>
-        <p class="body-17">Tell us about your operation. We'll come back with carriers and numbers — no commitments.</p>
-        <a href="contact.html" class="btn btn-accent">Get a quote <span aria-hidden="true">→</span></a>
-        <a href="mailto:hello@vantageriskadvisors.com" class="cta-email">hello@vantageriskadvisors.com</a>
+      <div class="section-container final-cta">
+        <span class="eyebrow">Select what you like</span>
+        <h2 class="display-48">Find the right insurance <span class="accent-phrase">for the way you actually do business.</span></h2>
+        <p>Vantage Risk Advisors gives every client personal attention. Tell us what you protect — we'll handle the rest.</p>
+        <a href="contact.html" class="btn btn-accent">Start a quote <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -239,47 +342,46 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo" aria-label="Vantage Risk Advisors home">
-            <img src="assets/logo-white.svg" alt="Vantage Risk Advisors">
+          <a href="index.html" class="brand brand-light" aria-label="Vantage Risk Advisors home">
+            <span class="brand-mark" aria-hidden="true">V</span>
+            <span class="brand-text">
+              <strong>Vantage Risk Advisors</strong>
+              <em>Independent · Insurance</em>
+            </span>
           </a>
-          <p>Independent commercial insurance broker. Real carrier access. Specialist depth.</p>
+          <p>Independent risk advisory and comprehensive insurance solutions for businesses and individuals.</p>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="about.html#team">Careers</a></li>
+            <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:vipul@vantageriskadvisors.com">vipul@vantageriskadvisors.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Mission</a></li>
+            <li><a href="healthcare.html">Coverage</a></li>
+            <li><a href="#sectors">Who we serve</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Industries</h4>
+          <h4>Coverage</h4>
           <ul>
             <li><a href="healthcare.html">Healthcare</a></li>
             <li><a href="hospitality.html">Hospitality</a></li>
-            <li><a href="multifamily.html">Multifamily</a></li>
-            <li><a href="business.html">Business</a></li>
+            <li><a href="multifamily.html">Multifamily &amp; HOA</a></li>
+            <li><a href="business.html">Business Insurance</a></li>
           </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="contact.html">Coverage Guides</a></li>
-            <li><a href="contact.html">Blog</a></li>
-            <li><a href="contact.html">FAQs</a></li>
-          </ul>
-        </div>
-        <div class="footer-col footer-contact">
-          <h4>Contact</h4>
-          <div class="contact-line"><a href="mailto:hello@vantageriskadvisors.com">hello@vantageriskadvisors.com</a></div>
-          <div class="contact-line">+1 (555) 123-4567</div>
-          <div class="contact-line">Texas · Serving nationally</div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Vantage Risk Advisors. All rights reserved.</p>
+        <p>© 2026 Vantage Risk Advisors · CA License #00000000</p>
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
+          <a href="#">Privacy</a>
           <a href="#">Terms</a>
         </div>
       </div>

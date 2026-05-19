@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Healthcare Insurance — Vantage Risk Advisors</title>
-  <meta name="description" content="Medical malpractice, license defense, HIPAA cyber, and the full coverage stack for physicians, dentists, CRNAs, anesthesia, and allied health practices.">
+  <title>Healthcare Coverage — Vantage Risk Advisors</title>
+  <meta name="description" content="Tailored coverage for clinics, physician offices, dental practices, CRNAs, and licensed professionals — combining malpractice with the rest of the business stack.">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,31 +16,48 @@
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/pages/vertical.css">
-  <link rel="stylesheet" href="css/pages/healthcare.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Vantage Risk Advisors home">
-        <img src="assets/logo-dark.svg" alt="Vantage Risk Advisors">
+      <a href="index.html" class="brand" aria-label="Vantage Risk Advisors home">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-text">
+          <strong>Vantage Risk Advisors</strong>
+          <em>Independent · Insurance</em>
+        </span>
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="healthcare.html">Healthcare</a></li>
-          <li><a href="hospitality.html">Hospitality</a></li>
-          <li><a href="multifamily.html">Multifamily</a></li>
-          <li><a href="business.html">Business</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="healthcare.html">Coverage</a></li>
+          <li><a href="index.html#sectors">Who we serve <span class="caret">▾</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-accent">Get a quote <span aria-hidden="true">→</span></a>
+      <div class="nav-right">
+        <a href="tel:+15551234567" class="nav-phone">+1 (555) 123-4567</a>
+        <a href="contact.html" class="btn btn-dark">Get a quote</a>
       </div>
       <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
     </div>
   </header>
+
+  <!-- Secondary breadcrumb bar -->
+  <div class="subnav">
+    <div class="subnav-inner">
+      <div class="subnav-crumbs">
+        <a href="index.html">Home</a>
+        <span class="crumb-sep">›</span>
+        <a href="healthcare.html">Coverage</a>
+        <span class="crumb-sep">›</span>
+        <span class="crumb-active">Healthcare</span>
+      </div>
+      <span class="subnav-switch">Switch coverage <span class="caret">▾</span></span>
+    </div>
+  </div>
 
   <main>
 
@@ -48,204 +65,181 @@
     <section class="bg-paper">
       <div class="section-container hero-vertical">
         <div class="hero-inner">
-          <div>
-            <span class="eyebrow">VRA · Healthcare</span>
-            <h1 class="display-72">Protection for the practice, <span class="accent-phrase">the practitioner, and the patient</span>.</h1>
-            <p class="body-17 hero-sub">A coverage program built around the way modern medical practices actually run — clinical risk, business risk, and the regulatory tail behind both.</p>
-            <div class="hero-buttons">
-              <a href="contact.html" class="btn btn-accent">Get a healthcare quote <span aria-hidden="true">→</span></a>
-              <a href="#coverage" class="btn btn-ghost">See coverage</a>
+          <span class="eyebrow">Healthcare coverage</span>
+          <h1 class="display-72">Protection for the practice, <span class="accent-phrase">the practitioner, and the patient.</span></h1>
+          <p class="body-17 hero-sub">Tailored coverage for clinics, physician offices, dental practices, CRNAs, and licensed professionals — combining malpractice with the rest of the business stack.</p>
+          <div class="hero-buttons">
+            <a href="#quote" class="btn btn-dark">Get a healthcare quote <span aria-hidden="true">→</span></a>
+            <a href="#stack" class="btn btn-ghost">See what's included</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. COVERAGE STACK -->
+    <section id="stack" class="bg-section stack-section">
+      <div class="section-container">
+        <div class="section-header-row">
+          <div class="col-head">
+            <span class="eyebrow">What's included</span>
+            <h2 class="display-48">The healthcare coverage stack.</h2>
+          </div>
+          <div class="col-desc">
+            <p class="body-17">A standard BOP will not respond to a malpractice suit. We build a layered program covering the licensed work, the space it happens in, and the people inside.</p>
+          </div>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-tile"><div class="st-num">#1</div><h4>Medical Malpractice</h4><p>Patient-harm claims and the legal defense behind them. Tailored to specialty — physicians, dentists, CRNAs, anesthesia, and allied health.</p></div>
+          <div class="stack-tile"><div class="st-num">#2</div><h4>License defense</h4><p>Board complaints and licensing-body investigations — a separate trigger from malpractice.</p></div>
+          <div class="stack-tile"><div class="st-num">#3</div><h4>Owned/Leased Property</h4><p>Buildings, equipment, fixtures, and records — sized to fit whether you own or lease the space.</p></div>
+          <div class="stack-tile"><div class="st-num">#4</div><h4>General Liability</h4><p>Premises claims and third-party injury — the visitor slip, the waiting-room incident.</p></div>
+          <div class="stack-tile"><div class="st-num">#5</div><h4>Business interruption</h4><p>Income replacement when an event forces a temporary closure of the practice.</p></div>
+          <div class="stack-tile"><div class="st-num">#6</div><h4>Cyber &amp; HIPAA</h4><p>Breach response, ransomware, regulatory fines, and the notification costs that follow.</p></div>
+          <div class="stack-tile"><div class="st-num">#7</div><h4>Workers comp</h4><p>State-mandated. Covers staff injuries — needlestick, lift, slip, and repetitive-strain claims.</p></div>
+          <div class="stack-tile"><div class="st-num">#8</div><h4>EPLI</h4><p>Employment-practices liability — harassment, wrongful-termination, and discrimination claims.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CLAIMS STRIP -->
+    <section class="bg-paper claims-block">
+      <div class="section-container">
+        <span class="eyebrow">Why we exist</span>
+        <h2 class="display-48">The claims that hurt healthcare practices.</h2>
+        <div class="claims-row">
+          <div class="claim-card"><div class="claim-num">~$120K</div><div class="claim-label">Avg malpractice defense</div></div>
+          <div class="claim-card"><div class="claim-num">~$200K</div><div class="claim-label">HIPAA breach response</div></div>
+          <div class="claim-card"><div class="claim-num">~$80K</div><div class="claim-label">EPLI claim</div></div>
+          <div class="claim-card"><div class="claim-num">~$50K</div><div class="claim-label">Licensing board defense</div></div>
+          <div class="claim-card"><div class="claim-num">~$300K</div><div class="claim-label">Ransomware incident</div></div>
+        </div>
+        <p class="claims-foot">Industry averages from carrier loss data. Actual exposure varies by specialty.</p>
+      </div>
+    </section>
+
+    <!-- 4. QUOTE -->
+    <section id="quote" class="bg-section quote-block">
+      <div class="section-container">
+        <div class="quote-inner">
+          <div class="quote-left">
+            <span class="eyebrow">Get a quote</span>
+            <h2 class="display-48">Request a healthcare quote.</h2>
+            <p>Tell us about your practice. We will run a preliminary coverage review and quote your full program — malpractice and the rest — within one business day.</p>
+            <div class="quote-direct">
+              <span class="qd-eyebrow">Or reach us directly</span>
+              <a href="mailto:vipul@vantageriskadvisors.com" class="email">vipul@vantageriskadvisors.com</a>
+              <div class="phone">+1 (555) 123-4567</div>
             </div>
           </div>
-          <aside class="hero-checklist" aria-label="What this covers">
-            <div class="checklist-eyebrow">Built for</div>
-            <div class="check-item"><span class="ck">✓</span> Physician groups &amp; specialty practices</div>
-            <div class="check-item"><span class="ck">✓</span> Dental, CRNA, and anesthesia providers</div>
-            <div class="check-item"><span class="ck">✓</span> Allied health and behavioral health</div>
-            <div class="check-item"><span class="ck">✓</span> Ambulatory surgical centers</div>
+
+          <aside class="quote-form-panel" aria-label="Request a healthcare quote">
+            <form class="quote-form" novalidate>
+              <div class="qf-row">
+                <div class="qf-field">
+                  <label for="qf-biz">Healthcare name <span class="req">*</span></label>
+                  <input id="qf-biz" name="business" type="text" placeholder="e.g. your healthcare name" required>
+                </div>
+                <div class="qf-field">
+                  <label for="qf-name">Your name <span class="req">*</span></label>
+                  <input id="qf-name" name="name" type="text" placeholder="Full name" required>
+                </div>
+              </div>
+              <div class="qf-row">
+                <div class="qf-field">
+                  <label for="qf-email">Email <span class="req">*</span></label>
+                  <input id="qf-email" name="email" type="email" placeholder="you@business.com" required>
+                </div>
+                <div class="qf-field">
+                  <label for="qf-phone">Phone <span class="req">*</span></label>
+                  <input id="qf-phone" name="phone" type="tel" placeholder="(___) ___-____" required>
+                </div>
+              </div>
+              <div class="qf-field">
+                <label for="qf-carrier">Current carrier (optional)</label>
+                <input id="qf-carrier" name="carrier" type="text" placeholder="Carrier name">
+              </div>
+              <div class="qf-field">
+                <label for="qf-renewal">Renewal / policy expiration</label>
+                <input id="qf-renewal" name="renewal" type="text" placeholder="MM / DD / YYYY">
+              </div>
+              <div class="qf-field">
+                <label for="qf-notes">Anything specific about your healthcare?</label>
+                <textarea id="qf-notes" name="notes" placeholder="A sentence or two is fine — operations, exposures, concerns."></textarea>
+              </div>
+              <div class="qf-submit">
+                <button type="submit" class="btn btn-accent">Request quote <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="qf-foot">We respond within one business day · No obligation</p>
+            </form>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- 2. COVERAGE STACK + claims strip -->
-    <section id="coverage" class="bg-section">
+    <!-- 5. ALSO COVERED -->
+    <section class="bg-paper also-block">
       <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">What's included · Coverage</span>
-          <h2 class="display-48">The healthcare coverage stack.</h2>
-          <p class="body-17">Eight coordinated lines, written by carriers that actually understand clinical risk.</p>
+        <div class="also-inner">
+          <div class="also-left">
+            <h3>Also covered by VRA</h3>
+            <div class="also-pills">
+              <a href="hospitality.html" class="pill">Hotels &amp; Hospitality <span aria-hidden="true">→</span></a>
+              <a href="business.html" class="pill">Business Insurance <span aria-hidden="true">→</span></a>
+              <a href="multifamily.html" class="pill">Multifamily &amp; HOA <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <a href="index.html#sectors" class="also-view">View all coverage <span aria-hidden="true">→</span></a>
         </div>
-
-        <div class="tile-grid">
-          <div class="tile"><div class="tile-num">01</div><h4>Medical Malpractice</h4><p>Patient-harm claims and the legal defense behind them. Tailored to specialty.</p></div>
-          <div class="tile"><div class="tile-num">02</div><h4>License Defense</h4><p>Board complaints and licensing-body investigations — a separate trigger.</p></div>
-          <div class="tile"><div class="tile-num">03</div><h4>Owned / Leased Property</h4><p>Buildings, equipment, fixtures, and records.</p></div>
-          <div class="tile"><div class="tile-num">04</div><h4>General Liability</h4><p>Premises claims and third-party injury.</p></div>
-          <div class="tile"><div class="tile-num">05</div><h4>Cyber &amp; Privacy</h4><p>HIPAA breach, ransomware, notification costs, and regulatory response.</p></div>
-          <div class="tile"><div class="tile-num">06</div><h4>Workers Comp</h4><p>Clinical and administrative staff — including per-diem and contract workers.</p></div>
-          <div class="tile"><div class="tile-num">07</div><h4>EPLI</h4><p>Wrongful termination, discrimination, and harassment claims.</p></div>
-          <div class="tile"><div class="tile-num">08</div><h4>Umbrella &amp; Excess</h4><p>Additional limits sitting above GL, auto, and employer's liability.</p></div>
-        </div>
-      </div>
-
-      <!-- Claims-cost strip inside dark section -->
-      <div class="section-container claims-strip" style="padding-top:0">
-        <div class="strip-inner">
-          <div class="strip-head">
-            <span class="eyebrow">Average cost</span>
-            <h3>The claims that hurt healthcare practices.</h3>
-          </div>
-          <div class="claim-cost">
-            <div class="big-num">~$120K</div>
-            <div class="claim-label">Malpractice indemnity per closed claim</div>
-          </div>
-          <div class="claim-cost">
-            <div class="big-num">~$200K</div>
-            <div class="claim-label">HIPAA breach response &amp; notification</div>
-          </div>
-          <div class="claim-cost">
-            <div class="big-num">~$80K</div>
-            <div class="claim-label">License-defense legal spend</div>
-          </div>
-          <div class="claim-cost">
-            <div class="big-num">~$300K</div>
-            <div class="claim-label">Employment-practice settlement</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. FOR THE PRACTICE ITSELF -->
-    <section class="bg-paper entity-block">
-      <div class="section-container">
-        <div class="entity-inner">
-          <div class="entity-body">
-            <span class="eyebrow">For the practice itself</span>
-            <h2 class="display-48">For the practice itself.</h2>
-            <p class="body-17">Clinical risk lives at the practitioner level — but the practice is a business too, with property, payroll, contracts, and a regulatory footprint that doesn't show up on a malpractice declaration page.</p>
-            <p class="body-17">We build the program so it covers both sides. The clinician, the entity behind them, and the operational lines that keep the doors open through a claim.</p>
-          </div>
-          <aside class="checklist-card">
-            <h3>Business-of-medicine lines</h3>
-            <ul>
-              <li><span class="ck">✓</span> Owned and leased property programs</li>
-              <li><span class="ck">✓</span> Premises &amp; visitor general liability</li>
-              <li><span class="ck">✓</span> HIPAA breach &amp; cyber response</li>
-              <li><span class="ck">✓</span> Workers comp for clinical &amp; admin staff</li>
-              <li><span class="ck">✓</span> Employment practices liability</li>
-              <li><span class="ck">✓</span> Umbrella sitting above primary lines</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. WHO WE COVER -->
-    <section class="bg-paper-alt">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">Who we cover</span>
-          <h2 class="display-48">Specialty depth, not a one-size template.</h2>
-          <p class="body-17">Programs structured around the way each practice actually operates — staffing, procedures, and regulatory exposure all factor in.</p>
-        </div>
-        <div class="who-grid">
-          <div class="who-card"><h3>Physicians</h3><p>Internal medicine, family practice, OB-GYN, surgical specialties.</p></div>
-          <div class="who-card"><h3>Dentists</h3><p>General dentistry, endodontics, oral surgery, orthodontics.</p></div>
-          <div class="who-card"><h3>CRNAs &amp; Anesthesia</h3><p>Independent CRNAs, anesthesia groups, and pain-management practices.</p></div>
-          <div class="who-card"><h3>Allied Health</h3><p>Physical therapy, chiropractic, occupational health, podiatry.</p></div>
-          <div class="who-card"><h3>Behavioral Health</h3><p>Psychology, psychiatry, addiction treatment, group practices.</p></div>
-          <div class="who-card"><h3>Surgical Centers</h3><p>Ambulatory surgical centers and procedure-based facilities.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. PROCESS STRIP -->
-    <section class="bg-paper process-strip">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="eyebrow">How we work</span>
-          <h2 class="display-28">Multiple carriers. One broker.</h2>
-          <p class="body-17">We shop your healthcare program across the carriers most likely to write it well — and stay in your corner through binding and claims.</p>
-        </div>
-        <div class="process-row">
-          <div class="process-step">
-            <div class="step-num">01 · Map the exposure</div>
-            <h3 class="display-22">Practice and clinician.</h3>
-            <p class="body-14">Specialty, procedures, staffing, and the regulatory tail. We start with the actual risk surface, not a generic application.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-num">02 · Quote the panel</div>
-            <h3 class="display-22">A-rated carriers only.</h3>
-            <p class="body-14">Side-by-side quotes from the markets that specialize in clinical risk and the supporting business lines.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-num">03 · Bind &amp; advocate</div>
-            <h3 class="display-22">In your corner at claim time.</h3>
-            <p class="body-14">A bound policy is the start, not the finish. We push the carrier to pay when the claim comes in.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. CONTACT CTA -->
-    <section class="bg-section">
-      <div class="section-container contact-cta">
-        <h2 class="display-48">Get a healthcare quote.</h2>
-        <p class="body-17">Tell us about your practice. We'll come back with real options from real carriers — usually within one business day.</p>
-        <a href="contact.html" class="btn btn-accent">Request a quote <span aria-hidden="true">→</span></a>
-        <a href="mailto:hello@vantageriskadvisors.com" class="cta-email">hello@vantageriskadvisors.com</a>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo" aria-label="Vantage Risk Advisors home">
-            <img src="assets/logo-white.svg" alt="Vantage Risk Advisors">
+          <a href="index.html" class="brand brand-light" aria-label="Vantage Risk Advisors home">
+            <span class="brand-mark" aria-hidden="true">V</span>
+            <span class="brand-text">
+              <strong>Vantage Risk Advisors</strong>
+              <em>Independent · Insurance</em>
+            </span>
           </a>
-          <p>Independent commercial insurance broker. Real carrier access. Specialist depth.</p>
+          <p>Independent risk advisory and comprehensive insurance solutions for businesses and individuals.</p>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="about.html#team">Careers</a></li>
+            <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:vipul@vantageriskadvisors.com">vipul@vantageriskadvisors.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Mission</a></li>
+            <li><a href="healthcare.html">Coverage</a></li>
+            <li><a href="index.html#sectors">Who we serve</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Industries</h4>
+          <h4>Coverage</h4>
           <ul>
             <li><a href="healthcare.html">Healthcare</a></li>
             <li><a href="hospitality.html">Hospitality</a></li>
-            <li><a href="multifamily.html">Multifamily</a></li>
-            <li><a href="business.html">Business</a></li>
+            <li><a href="multifamily.html">Multifamily &amp; HOA</a></li>
+            <li><a href="business.html">Business Insurance</a></li>
           </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="contact.html">Coverage Guides</a></li>
-            <li><a href="contact.html">Blog</a></li>
-            <li><a href="contact.html">FAQs</a></li>
-          </ul>
-        </div>
-        <div class="footer-col footer-contact">
-          <h4>Contact</h4>
-          <div class="contact-line"><a href="mailto:hello@vantageriskadvisors.com">hello@vantageriskadvisors.com</a></div>
-          <div class="contact-line">+1 (555) 123-4567</div>
-          <div class="contact-line">Texas · Serving nationally</div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Vantage Risk Advisors. All rights reserved.</p>
+        <p>© 2026 Vantage Risk Advisors · CA License #00000000</p>
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
+          <a href="#">Privacy</a>
           <a href="#">Terms</a>
         </div>
       </div>

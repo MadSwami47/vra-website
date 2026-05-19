@@ -1,51 +1,73 @@
-/* Home page styles */
+/* Home page — 8 sections matching design screenshot */
 
-/* ── 1. Hero ── */
+/* ── 1. Hero (light) ── */
 .hero-home {
-  padding-top: 96px;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 .hero-home .hero-inner {
-  max-width: 880px;
+  max-width: 760px;
 }
-.hero-home h1 { margin-bottom: 24px; }
-.hero-home h1 .accent-phrase { color: var(--accent); }
-.hero-home .hero-sub { margin-bottom: 32px; max-width: 560px; }
-.hero-home .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-home h1 {
+  margin-bottom: 24px;
+  font-size: 88px;
+  line-height: 1.02;
+}
+.hero-home h1 .accent-phrase {
+  color: var(--accent);
+  display: block;
+}
+.hero-home .hero-sub {
+  margin-bottom: 36px;
+  max-width: 560px;
+  color: var(--inkSoft);
+}
+.hero-home .hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-/* ── 2. Sectors grid (dark tiles) ── */
+/* ── 2. Specialists (dark, 4-col) ── */
+.sectors-section .section-header-row {
+  align-items: flex-start;
+  margin-bottom: 56px;
+}
+.sectors-section .section-header-row .col-head h2 {
+  font-size: 56px;
+  line-height: 1.05;
+}
+.sectors-section .section-header-row .col-desc {
+  color: rgba(255,255,255,0.65);
+}
 .sectors-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap-m);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-s);
 }
 .sector-tile {
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius-m);
-  padding: 32px;
+  padding: 28px 24px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
   text-decoration: none;
   color: white;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 .sector-tile:hover {
   background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.20);
   transform: translateY(-2px);
 }
-.sector-tile-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-s);
-  background: rgba(45, 92, 245, 0.18);
+.sector-tile-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
   color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 6px;
+  letter-spacing: 0.16em;
+  margin-bottom: 28px;
 }
 .sector-tile-title {
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -53,134 +75,394 @@
   font-size: 24px;
   color: white;
   letter-spacing: -0.015em;
-  margin: 0;
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+.sector-tile-meta {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 14px;
 }
 .sector-tile-body {
   font-family: 'Hanken Grotesk', sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.55;
   color: rgba(255,255,255,0.65);
-  margin: 0;
+  margin: 0 0 22px;
   flex: 1;
 }
 .sector-tile-link {
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
   font-weight: 500;
   color: var(--accent);
-  margin-top: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.sector-tile-link .arrow { transition: transform 0.15s ease; }
-.sector-tile:hover .sector-tile-link .arrow { transform: translateX(3px); }
-
-/* ── 3. Why VRA — 3 col feature ── */
-.feature-3col {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-l);
-}
-.feature-item .feature-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--accent);
   letter-spacing: 0.16em;
-  margin-bottom: 14px;
+  text-transform: uppercase;
 }
-.feature-item h3 { margin-bottom: 10px; }
 
-/* ── 4. Coverage stack ── */
-.coverage-cta-row { margin-top: 48px; display: flex; gap: 12px; flex-wrap: wrap; }
-
-/* ── 5. Industries strip ── */
-.industry-strip {
+/* ── 3. Our mission (light) ── */
+.mission-section .mission-inner {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: #ffffff;
-  border-radius: var(--radius-m);
-  overflow: hidden;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--gap-l);
+  align-items: start;
 }
-.industry-strip .industry-cell {
-  padding: 36px 28px;
-  border-right: 1px solid var(--line);
+.mission-quadrant {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.mission-card {
+  background: var(--paperAlt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 22px 20px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
+}
+.mission-card .mc-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.16em;
+  margin-bottom: 16px;
+}
+.mission-card h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.mission-card p {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--inkSoft);
+}
+
+.mission-body h2 {
+  font-size: 52px;
+  margin-bottom: 22px;
+  line-height: 1.08;
+}
+.mission-body h2 .accent-phrase { color: var(--accent); }
+.mission-body p {
+  color: var(--inkSoft);
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+.mission-body p:last-of-type { margin-bottom: 28px; }
+
+/* ── 4. Most specialized coverage (dark) ── */
+.gaps-section .gaps-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-l);
+  align-items: start;
+}
+.gaps-section .gaps-left h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+.gaps-section .gaps-left p {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  margin-bottom: 28px;
+  max-width: 460px;
+}
+.gaps-pills {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
-.industry-strip .industry-cell:last-child { border-right: 0; }
-.industry-strip .industry-cell h3 { margin-bottom: 0; }
-.industry-strip .industry-cell p { color: var(--inkSoft); }
-.industry-strip .industry-cell .link-accent { margin-top: auto; padding-top: 18px; }
+.gaps-pills .pill {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.85);
+  font-size: 12px;
+  padding: 7px 12px;
+}
 
-/* ── 6. Process — horizontal steps ── */
-.process-row {
+.gaps-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-m);
+  padding: 28px;
+}
+.gaps-card h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: white;
+  letter-spacing: -0.01em;
+  margin-bottom: 22px;
+}
+.gaps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.gaps-list li {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.gaps-list .gap-mark {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.gaps-list .gap-content {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+}
+.gaps-list .gap-content strong {
+  color: white;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+}
+.gaps-list .gap-content span {
+  color: rgba(255,255,255,0.6);
+  display: block;
+}
+
+/* ── 5. The Vantage difference (light) ── */
+.difference-section h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin-bottom: 48px;
+}
+.difference-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-m);
+}
+.difference-card {
+  background: var(--paperAlt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 28px 28px;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.difference-card .dc-num {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-s);
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.difference-card h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.difference-card p {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--inkSoft);
+}
+
+/* ── 6. Three steps (dark) ── */
+.process-section h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin-bottom: 56px;
+}
+.process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap-l);
-  position: relative;
 }
-.process-row::before {
-  content: '';
-  position: absolute;
-  left: 56px;
-  right: 56px;
-  top: 22px;
-  height: 1px;
-  background: var(--line);
-  z-index: 0;
-}
-.process-step { position: relative; z-index: 1; background: var(--paperAlt); padding-right: 16px; }
-.process-step .step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+.process-step .ps-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 64px;
   color: var(--accent);
+  letter-spacing: -0.025em;
+  line-height: 1;
   margin-bottom: 22px;
 }
-.process-step h3 { margin-bottom: 10px; }
-.process-step p { color: var(--inkSoft); }
-
-/* ── 7. Contact CTA ── */
-.contact-cta { text-align: center; }
-.contact-cta h2 { margin: 0 auto 18px; max-width: 760px; }
-.contact-cta p  { margin: 0 auto 32px; max-width: 540px; }
-.contact-cta .cta-email {
-  display: block;
-  margin-top: 22px;
-  color: rgba(255,255,255,0.65);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  letter-spacing: 0.04em;
+.process-step h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
 }
-.contact-cta .cta-email:hover { color: white; }
+.process-step p {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.65);
+  max-width: 280px;
+}
+
+/* ── 7. Inline form (light) ── */
+.intake-section .intake-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--gap-l);
+  align-items: start;
+}
+.intake-left h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+.intake-left h2 .accent-phrase { color: var(--accent); }
+.intake-left p {
+  color: var(--inkSoft);
+  font-size: 15px;
+  max-width: 380px;
+}
+
+.intake-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 32px;
+}
+.intake-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.intake-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.intake-row .intake-field { margin-bottom: 0; }
+.intake-field label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--inkSoft);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.intake-field input,
+.intake-field select {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  padding: 11px 14px;
+  width: 100%;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.intake-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+.intake-field input:focus,
+.intake-field select:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accentSoft);
+}
+.intake-submit {
+  margin-top: 8px;
+}
+.intake-submit .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 13px 22px;
+  font-size: 14px;
+}
+.intake-foot {
+  margin-top: 14px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ── 8. Final CTA banner (dark) ── */
+.final-cta {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.final-cta .eyebrow { margin-bottom: 18px; }
+.final-cta h2 {
+  font-size: 56px;
+  line-height: 1.08;
+  margin: 0 auto 22px;
+  max-width: 880px;
+}
+.final-cta h2 .accent-phrase { color: var(--accent); }
+.final-cta p {
+  color: rgba(255,255,255,0.70);
+  font-size: 16px;
+  margin: 0 auto 32px;
+  max-width: 520px;
+}
 
 /* ── Responsive ── */
+@media (max-width: 1200px) {
+  .hero-home h1 { font-size: 72px; }
+  .sectors-section .section-header-row .col-head h2 { font-size: 44px; }
+  .mission-body h2,
+  .gaps-section .gaps-left h2,
+  .difference-section h2,
+  .process-section h2,
+  .intake-left h2,
+  .final-cta h2 { font-size: 40px; }
+}
 @media (max-width: 1100px) {
-  .industry-strip          { grid-template-columns: 1fr 1fr; }
-  .industry-strip .industry-cell:nth-child(2) { border-right: 0; }
-  .industry-strip .industry-cell:nth-child(1),
-  .industry-strip .industry-cell:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .sectors-grid { grid-template-columns: 1fr 1fr; }
+  .mission-section .mission-inner,
+  .gaps-section .gaps-inner,
+  .intake-section .intake-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 900px) {
-  .feature-3col { grid-template-columns: 1fr; gap: 32px; }
-  .process-row  { grid-template-columns: 1fr; gap: 28px; }
-  .process-row::before { display: none; }
+  .hero-home h1 { font-size: 56px; }
+  .process-grid { grid-template-columns: 1fr; gap: 36px; }
+  .difference-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .hero-home              { padding-top: 72px; padding-bottom: 56px; }
+  .hero-home              { padding-top: 56px; padding-bottom: 56px; }
+  .hero-home h1           { font-size: 40px; }
   .sectors-grid           { grid-template-columns: 1fr; }
-  .industry-strip         { grid-template-columns: 1fr; }
-  .industry-strip .industry-cell { border-right: 0; border-bottom: 1px solid var(--line); }
-  .industry-strip .industry-cell:last-child { border-bottom: 0; }
+  .mission-quadrant       { grid-template-columns: 1fr 1fr; }
+  .intake-row             { grid-template-columns: 1fr; gap: 0; }
+  .intake-row .intake-field { margin-bottom: 16px; }
+  .final-cta h2           { font-size: 32px; }
+  .process-step .ps-num   { font-size: 48px; }
 }
