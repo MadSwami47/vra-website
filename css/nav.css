@@ -110,9 +110,15 @@
 .nav-dropdown-menu {
   position: absolute;
   top: calc(100% + 14px);
-  left: 0;
+  /* Panel padding 6px + item padding 14px = 20px of indent before text.
+     Shift panel left by that amount so the item text aligns with the
+     trigger text "Coverage" (which sits at the <li> left edge). */
+  left: -20px;
   transform: translateY(-8px);
-  width: max-content;
+  /* Fixed width sized to comfortably fit the Healthcare descriptor
+     ("Physicians, dentists, CRNAs, allied health") on one line.
+     Longer descriptors (e.g. Business Insurance) wrap to multiple lines. */
+  width: 320px;
   background: var(--inkSection);
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius-m);
@@ -174,9 +180,10 @@
   color: rgba(255,255,255,0.55);
   line-height: 1.4;
   text-align: left;
-  align-self: flex-start;
-  white-space: nowrap;
-  width: auto;
+  align-self: stretch;
+  /* white-space: normal (default) so longer descriptors wrap inside the
+     fixed-width panel. Healthcare's descriptor fits on one line; the
+     Business Insurance descriptor wraps to a second line. */
 }
 
 .nav-right {
