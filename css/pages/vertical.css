@@ -333,7 +333,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 1200px) {
-  .hero-vertical h1 { font-size: 56px; }
+  .hero-vertical h1 { font-size: 52px; }
   .stack-section .section-header-row .col-head h2,
   .claims-block h2 { font-size: 40px; }
 }
@@ -343,13 +343,16 @@
   .quote-block .quote-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 960px) {
+  .hero-vertical h1 { font-size: 44px; }
+}
+/* Hero stays two-column down to ~720px so laptops and tablets in
+   landscape keep the side-by-side layout. */
+@media (max-width: 720px) {
   .hero-vertical .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-vertical .hero-text  { max-width: 720px; }
   .hero-vertical .hero-image { max-width: 560px; margin: 0 auto; }
   .hero-vertical .hero-image img { aspect-ratio: 5 / 4; }
-}
-@media (max-width: 900px) {
-  .hero-vertical h1 { font-size: 48px; }
+  .hero-vertical h1 { font-size: 40px; }
   .claims-row { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {

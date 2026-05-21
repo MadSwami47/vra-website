@@ -456,7 +456,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 1200px) {
-  .hero-home h1 { font-size: 60px; }
+  .hero-home h1 { font-size: 56px; }
   .sectors-section .section-header-row .col-head h2 { font-size: 44px; }
   .mission-body h2,
   .gaps-section .gaps-left h2,
@@ -472,15 +472,20 @@
   .intake-section .intake-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 960px) {
+  .hero-home h1 { font-size: 48px; }
+}
+@media (max-width: 900px) {
+  .process-grid { grid-template-columns: 1fr; gap: 36px; }
+  .difference-grid { grid-template-columns: 1fr; }
+}
+/* Hero stays two-column down to ~720px so laptops and tablets in
+   landscape keep the side-by-side layout. */
+@media (max-width: 720px) {
   .hero-home .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-home .hero-text  { max-width: 720px; }
   .hero-home .hero-image { max-width: 560px; margin: 0 auto; }
   .hero-home .hero-image img { aspect-ratio: 5 / 4; }
-}
-@media (max-width: 900px) {
-  .hero-home h1 { font-size: 52px; }
-  .process-grid { grid-template-columns: 1fr; gap: 36px; }
-  .difference-grid { grid-template-columns: 1fr; }
+  .hero-home h1 { font-size: 40px; }
 }
 @media (max-width: 640px) {
   .hero-home              { padding-top: 56px; padding-bottom: 56px; }
