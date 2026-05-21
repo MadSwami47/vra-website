@@ -49,6 +49,7 @@
     ],
     business: [
       ['retail',      'Retail / eCommerce'],
+      ['gas-station', 'Gas station'],
       ['professional','Professional services'],
       ['contractor',  'Contractor / Trades'],
       ['tech',        'Technology / SaaS'],
