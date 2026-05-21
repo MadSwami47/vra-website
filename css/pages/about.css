@@ -32,9 +32,11 @@
 }
 .hero-about .hero-image {
   /* Explicit width + aspect-ratio on the WRAPPER so it deterministically
-     fills its grid column (matching the body-text column below). */
+     fills its grid column (matching the body-text column below).
+     1:1 square (was 4:5 portrait) — 20% shorter height at the same
+     width. object-fit: cover crops the photo without distortion. */
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-l);
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
@@ -250,8 +252,7 @@
 @media (max-width: 720px) {
   .hero-about .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-about .hero-text  { max-width: 720px; }
-  .hero-about .hero-image { max-width: 560px; margin: 0 auto; }
-  .hero-about .hero-image img { aspect-ratio: 5 / 4; }
+  .hero-about .hero-image { max-width: 560px; margin: 0 auto; aspect-ratio: 5 / 4; }
   .hero-about h1 { font-size: 40px; }
   .exist-inner { grid-template-columns: 1fr; gap: 28px; }
 }
@@ -261,7 +262,7 @@
   .principles-section,
   .compare-section { padding-top: 64px; padding-bottom: 64px; }
   .hero-about h1  { font-size: 36px; }
-  .hero-about .hero-image img { aspect-ratio: 4 / 3; }
+  .hero-about .hero-image { aspect-ratio: 4 / 3; }
   .principles     { grid-template-columns: 1fr; }
   .final-cta h2   { font-size: 28px; }
 }
