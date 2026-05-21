@@ -111,14 +111,13 @@
   position: absolute;
   top: calc(100% + 14px);
   /* Panel padding 6px + item padding 14px = 20px of indent before text.
-     Shift panel left by that amount so the item text aligns with the
+     Shift panel left by that 20px so item text lines up with the
      trigger text "Coverage" (which sits at the <li> left edge). */
   left: -20px;
   transform: translateY(-8px);
-  /* Fixed width sized to comfortably fit the Healthcare descriptor
-     ("Physicians, dentists, CRNAs, allied health") on one line.
-     Longer descriptors (e.g. Business Insurance) wrap to multiple lines. */
-  width: 320px;
+  /* Wide enough that "Physicians, dentists, CRNAs, allied health"
+     stays on one line in Hanken Grotesk. Longer descriptors wrap. */
+  width: 360px;
   background: var(--inkSection);
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius-m);
@@ -128,6 +127,7 @@
   transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
   z-index: 200;
   box-shadow: 0 16px 48px rgba(0,0,0,0.40);
+  box-sizing: border-box;
 }
 /* Invisible hover bridge so cursor can travel from trigger to menu */
 .nav-dropdown-menu::before {
@@ -143,14 +143,12 @@
   visibility: visible;
   transform: translateY(0);
 }
-/* Specificity .nav-links .nav-dropdown-item beats .nav-links a so flex
-   column + left-alignment actually applies inside the menu. */
+/* Block layout — simpler and more predictable than flex column inside an
+   inline-flex parent. Each item is a full-width block; strong + span
+   inside are also blocks that stack vertically. Specificity bumped to
+   .nav-links .nav-dropdown-item to win over .nav-links a. */
 .nav-links .nav-dropdown-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 3px;
+  display: block;
   padding: 10px 14px;
   border-radius: var(--radius-s);
   text-decoration: none;
@@ -158,32 +156,35 @@
   text-align: left;
   width: 100%;
   color: rgba(255,255,255,0.85);
+  box-sizing: border-box;
 }
 .nav-links .nav-dropdown-item:hover {
   background: rgba(255,255,255,0.06);
   color: #ffffff;
 }
 .nav-links .nav-dropdown-item strong {
+  display: block;
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 600;
   font-size: 14px;
   color: #ffffff;
   letter-spacing: -0.005em;
   text-align: left;
-  align-self: flex-start;
-  width: auto;
+  margin: 0 0 3px;
+  width: 100%;
 }
 .nav-links .nav-dropdown-item span {
+  display: block;
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: rgba(255,255,255,0.55);
-  line-height: 1.4;
+  line-height: 1.45;
   text-align: left;
-  align-self: stretch;
-  /* white-space: normal (default) so longer descriptors wrap inside the
-     fixed-width panel. Healthcare's descriptor fits on one line; the
-     Business Insurance descriptor wraps to a second line. */
+  margin: 0;
+  width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .nav-right {
