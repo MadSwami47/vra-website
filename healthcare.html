@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/pages/vertical.css">
+  <link rel="stylesheet" href="css/quote-form.css">
 </head>
 <body>
 
@@ -159,44 +160,99 @@
           </div>
 
           <aside class="quote-form-panel" aria-label="Request a healthcare quote">
+            <!-- ▼ Canonical quote form. Source: quote-form-snippet.html ▼ -->
             <form class="quote-form" novalidate>
+
               <div class="qf-row">
-                <div class="qf-field">
-                  <label for="qf-biz">Healthcare name <span class="req">*</span></label>
-                  <input id="qf-biz" name="business" type="text" placeholder="e.g. your healthcare name" required>
+                <div class="qf-field" data-field="first_name">
+                  <label for="qf-first-name">First name <span class="req">*</span></label>
+                  <input id="qf-first-name" name="first_name" type="text" autocomplete="given-name" required>
+                  <div class="qf-error" role="alert"></div>
                 </div>
-                <div class="qf-field">
-                  <label for="qf-name">Your name <span class="req">*</span></label>
-                  <input id="qf-name" name="name" type="text" placeholder="Full name" required>
+                <div class="qf-field" data-field="last_name">
+                  <label for="qf-last-name">Last name <span class="req">*</span></label>
+                  <input id="qf-last-name" name="last_name" type="text" autocomplete="family-name" required>
+                  <div class="qf-error" role="alert"></div>
                 </div>
               </div>
+
+              <div class="qf-field" data-field="business_name">
+                <label for="qf-business-name">Business name <span class="req">*</span></label>
+                <input id="qf-business-name" name="business_name" type="text" autocomplete="organization" required>
+                <div class="qf-error" role="alert"></div>
+              </div>
+
               <div class="qf-row">
-                <div class="qf-field">
-                  <label for="qf-email">Email <span class="req">*</span></label>
-                  <input id="qf-email" name="email" type="email" placeholder="you@business.com" required>
+                <div class="qf-field" data-field="email">
+                  <label for="qf-email">Email address <span class="req">*</span></label>
+                  <input id="qf-email" name="email" type="email" autocomplete="email" required>
+                  <div class="qf-error" role="alert"></div>
                 </div>
-                <div class="qf-field">
+                <div class="qf-field" data-field="phone">
                   <label for="qf-phone">Phone <span class="req">*</span></label>
-                  <input id="qf-phone" name="phone" type="tel" placeholder="(___) ___-____" required>
+                  <input id="qf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(___) ___-____" required>
+                  <div class="qf-error" role="alert"></div>
                 </div>
               </div>
-              <div class="qf-field">
-                <label for="qf-carrier">Current carrier (optional)</label>
-                <input id="qf-carrier" name="carrier" type="text" placeholder="Carrier name">
+
+              <div class="qf-field" data-field="industry">
+                <label for="qf-industry">Business type / industry <span class="req">*</span></label>
+                <select id="qf-industry" name="industry" required>
+                  <option value="" disabled selected>Choose an industry…</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="hospitality">Hospitality</option>
+                  <option value="multifamily">Multifamily</option>
+                  <option value="hoa">HOA</option>
+                  <option value="business">Business insurance</option>
+                  <option value="other">Something else</option>
+                </select>
+                <div class="qf-error" role="alert"></div>
               </div>
-              <div class="qf-field">
-                <label for="qf-renewal">Renewal / policy expiration</label>
-                <input id="qf-renewal" name="renewal" type="text" placeholder="MM / DD / YYYY">
+
+              <div class="qf-field qf-cascade" data-cascade-for="specialty" data-field="specialty">
+                <label for="qf-specialty">Specialty</label>
+                <select id="qf-specialty" name="specialty">
+                  <option value="" disabled selected>Choose a specialty…</option>
+                </select>
               </div>
-              <div class="qf-field">
-                <label for="qf-notes">Anything specific about your healthcare?</label>
-                <textarea id="qf-notes" name="notes" placeholder="A sentence or two is fine — operations, exposures, concerns."></textarea>
+
+              <div class="qf-field qf-cascade" data-cascade-for="other_industry" data-field="other_industry">
+                <label for="qf-other-industry">Describe your industry</label>
+                <input id="qf-other-industry" name="other_industry" type="text">
               </div>
+
+              <div class="qf-field qf-cascade" data-cascade-for="other_specialty" data-field="other_specialty">
+                <label for="qf-other-specialty">Describe your specialty</label>
+                <input id="qf-other-specialty" name="other_specialty" type="text">
+              </div>
+
+              <div class="qf-row">
+                <div class="qf-field" data-field="current_carrier">
+                  <label for="qf-current-carrier">Current carrier</label>
+                  <input id="qf-current-carrier" name="current_carrier" type="text">
+                </div>
+                <div class="qf-field" data-field="policy_expiration">
+                  <label for="qf-policy-expiration">Policy expiration</label>
+                  <input id="qf-policy-expiration" name="policy_expiration" type="text" placeholder="MM/YYYY">
+                </div>
+              </div>
+
+              <div class="qf-field" data-field="notes">
+                <label for="qf-notes">Additional notes</label>
+                <textarea id="qf-notes" name="notes" rows="3"></textarea>
+              </div>
+
               <div class="qf-submit">
-                <button type="submit" class="btn btn-accent">Request quote <span aria-hidden="true">→</span></button>
+                <button type="submit" class="btn btn-accent btn-block">Send my request <span aria-hidden="true">→</span></button>
               </div>
-              <p class="qf-foot">We respond within one business day · No obligation</p>
+
+              <p class="qf-foot">We respond within one business day &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Your data stays with VRA</p>
             </form>
+
+            <div class="qf-success" hidden>
+              <h3>Thank you — we'll be in touch within one business day.</h3>
+            </div>
+            <!-- ▲ End canonical quote form ▲ -->
           </aside>
         </div>
       </div>
@@ -272,5 +328,6 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script src="js/quote-form.js" defer></script>
 </body>
 </html>

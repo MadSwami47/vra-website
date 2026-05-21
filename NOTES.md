@@ -46,11 +46,15 @@ Replace with a finalized brand asset when available.
 
 ## Form
 
-`js/contact.js` validates 6 fields (name, email required; phone, message
-optional; industry + revenue required selects). On success, the form swaps for
-a `<#form-success>` confirmation panel. Wire to an endpoint (Formspree, Netlify
-Forms, custom Lambda, etc.) by handling the submit event before the success
-swap.
+`js/quote-form.js` is the universal handler for the canonical quote form
+(class `.quote-form`). It powers the cascading industry → specialty dropdown,
+inline required-field validation, and the success-panel swap. The form is
+embedded on six pages (index, contact, healthcare, hospitality, multifamily,
+business) — see `quote-form-snippet.html` for the canonical markup.
+
+Backend integration goes inside `submitForm()` in quote-form.js, where the
+single fetch() hook can post to NowCerts/Momentum AMS, Google Workspace, or
+any other endpoint.
 
 ## GitHub Pages deployment
 

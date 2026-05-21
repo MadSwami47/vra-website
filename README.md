@@ -50,7 +50,7 @@ Or any static server (`npx serve`, VS Code Live Server, etc.).
 │       └── contact.css
 ├── js/
 │   ├── nav.js           Scroll shadow, mobile menu, active link
-│   └── contact.js       Contact form validation
+│   └── quote-form.js    Canonical quote form (validation, cascade, submission)
 ├── assets/
 │   ├── logo-dark.svg
 │   ├── logo-white.svg
