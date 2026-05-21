@@ -1,16 +1,22 @@
 /* Shared vertical-page styles (healthcare, hospitality, multifamily, business) */
 
-/* ── 1. Hero (light, single column, lots of vertical space) ── */
+/* ── 1. Hero (light, two-column: text + industry photo) ── */
 .hero-vertical {
   padding-top: 80px;
   padding-bottom: 96px;
 }
 .hero-vertical .hero-inner {
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: var(--gap-l);
+  align-items: center;
+}
+.hero-vertical .hero-text {
+  max-width: 560px;
 }
 .hero-vertical h1 {
   margin-bottom: 24px;
-  font-size: 80px;
+  font-size: 64px;
   line-height: 1.05;
 }
 .hero-vertical h1 .accent-phrase {
@@ -29,6 +35,19 @@
 .hero-vertical .hero-buttons .btn {
   white-space: normal;
   text-align: left;
+}
+.hero-vertical .hero-image {
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
+  background: var(--paperAlt);
+}
+.hero-vertical .hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
 }
 
 /* ── 2. Coverage stack (dark, 4×2 tiles) ── */
@@ -314,7 +333,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 1200px) {
-  .hero-vertical h1 { font-size: 64px; }
+  .hero-vertical h1 { font-size: 56px; }
   .stack-section .section-header-row .col-head h2,
   .claims-block h2 { font-size: 40px; }
 }
@@ -323,8 +342,14 @@
   .claims-row { grid-template-columns: 1fr 1fr 1fr; }
   .quote-block .quote-inner { grid-template-columns: 1fr; }
 }
+@media (max-width: 960px) {
+  .hero-vertical .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-vertical .hero-text  { max-width: 720px; }
+  .hero-vertical .hero-image { max-width: 560px; margin: 0 auto; }
+  .hero-vertical .hero-image img { aspect-ratio: 5 / 4; }
+}
 @media (max-width: 900px) {
-  .hero-vertical h1 { font-size: 52px; }
+  .hero-vertical h1 { font-size: 48px; }
   .claims-row { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
@@ -333,6 +358,7 @@
   .claims-block,
   .quote-block            { padding-top: 64px; padding-bottom: 64px; }
   .hero-vertical h1       { font-size: 40px; }
+  .hero-vertical .hero-image img { aspect-ratio: 4 / 3; }
   .stack-grid             { grid-template-columns: 1fr; }
   .claims-row             { grid-template-columns: 1fr; }
   .qf-row                 { grid-template-columns: 1fr; gap: 0; }
