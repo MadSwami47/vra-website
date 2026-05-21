@@ -50,9 +50,14 @@
 }
 
 /* ── 2. Why we exist (light, 2-col) ── */
-.exist-section {
-  padding-top: 32px;
-  padding-bottom: 96px;
+/* Spacing rule for white-bg content sections on About: the outer
+   <section> contributes no padding so the gap between sections is
+   single-sourced from .section-container's padding (reduced to 64px
+   below). Previously the outer + inner stacked to 192-384px gaps. */
+.exist-section { padding: 0; }
+.exist-section > .section-container {
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 .exist-inner {
   display: grid;
@@ -80,9 +85,10 @@
 .exist-body p:last-child { margin-bottom: 0; }
 
 /* ── 3. Four principles (dark) ── */
-.principles-section {
-  padding-top: 96px;
-  padding-bottom: 96px;
+.principles-section { padding: 0; }
+.principles-section > .section-container {
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 .principles-section h2 {
   font-size: 44px;
@@ -140,9 +146,10 @@
 }
 
 /* ── 4. Independent vs captive (light, 2-col compare) ── */
-.compare-section {
-  padding-top: 96px;
-  padding-bottom: 96px;
+.compare-section { padding: 0; }
+.compare-section > .section-container {
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 .compare {
   display: grid;
@@ -258,9 +265,12 @@
 }
 @media (max-width: 640px) {
   .hero-about     { padding-top: 56px; padding-bottom: 48px; }
-  .exist-section,
-  .principles-section,
-  .compare-section { padding-top: 64px; padding-bottom: 64px; }
+  .exist-section > .section-container,
+  .principles-section > .section-container,
+  .compare-section > .section-container {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
   .hero-about h1  { font-size: 36px; }
   .hero-about .hero-image { aspect-ratio: 4 / 3; }
   .principles     { grid-template-columns: 1fr; }
