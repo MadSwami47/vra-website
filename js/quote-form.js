@@ -49,7 +49,7 @@
     ],
     business: [
       ['retail',      'Retail / eCommerce'],
-      ['gas-station', 'Gas station'],
+      ['gas-station', 'C-store / gas station'],
       ['professional','Professional services'],
       ['contractor',  'Contractor / Trades'],
       ['tech',        'Technology / SaaS'],
