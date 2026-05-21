@@ -98,6 +98,69 @@
   font-size: 9px;
   opacity: 0.5;
   transform: translateY(1px);
+  transition: transform 0.15s ease;
+}
+
+/* ── Hover dropdown ── */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger { cursor: pointer; }
+.nav-dropdown.is-open .nav-dropdown-trigger { color: #ffffff; }
+.nav-dropdown.is-open .caret { transform: translateY(1px) rotate(180deg); }
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translate(-50%, -8px);
+  min-width: 320px;
+  background: var(--inkSection);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius-m);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+  z-index: 200;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.40);
+}
+/* Invisible hover bridge so cursor can travel from trigger to menu */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+.nav-dropdown.is-open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.nav-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px;
+  border-radius: var(--radius-s);
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.nav-dropdown-item:hover {
+  background: rgba(255,255,255,0.06);
+}
+.nav-dropdown-item strong {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: -0.005em;
+}
+.nav-dropdown-item span {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.4;
 }
 
 .nav-right {
@@ -228,4 +291,28 @@
   .brand-text em { font-size: 8px; }
   .subnav-inner { flex-direction: column; align-items: flex-start; gap: 6px; padding: 10px var(--section-h); }
   .subnav-switch { font-size: 10px; }
+
+  /* Mobile: dropdown becomes a static stacked list when open */
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown-menu {
+    position: static;
+    transform: none;
+    min-width: 0;
+    margin-top: 6px;
+    padding: 0 0 0 12px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-left: 1px solid rgba(255,255,255,0.10);
+    border-radius: 0;
+    display: none;
+  }
+  .nav-dropdown-menu::before { display: none; }
+  .nav-dropdown.is-open .nav-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    transform: none;
+  }
+  .nav-dropdown-item { padding: 8px 10px; }
 }
