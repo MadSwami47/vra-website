@@ -110,13 +110,14 @@
 .nav-dropdown-menu {
   position: absolute;
   top: calc(100% + 14px);
-  left: 50%;
-  transform: translate(-50%, -8px);
-  min-width: 320px;
+  left: 0;
+  transform: translateY(-8px);
+  width: max-content;
+  max-width: 360px;
   background: var(--inkSection);
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius-m);
-  padding: 10px;
+  padding: 8px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
@@ -135,16 +136,17 @@
 .nav-dropdown.is-open .nav-dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, 0);
+  transform: translateY(0);
 }
 .nav-dropdown-item {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  padding: 12px 14px;
+  padding: 10px 14px;
   border-radius: var(--radius-s);
   text-decoration: none;
   transition: background 0.15s ease;
+  text-align: left;
 }
 .nav-dropdown-item:hover {
   background: rgba(255,255,255,0.06);
