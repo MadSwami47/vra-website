@@ -31,6 +31,10 @@
   max-width: 520px;
 }
 .hero-about .hero-image {
+  /* Explicit width + aspect-ratio on the WRAPPER so it deterministically
+     fills its grid column (matching the body-text column below). */
+  width: 100%;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-l);
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
@@ -41,7 +45,6 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  aspect-ratio: 4 / 5;
 }
 
 /* ── 2. Why we exist (light, 2-col) ── */

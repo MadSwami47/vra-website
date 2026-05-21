@@ -7,7 +7,7 @@
 }
 .hero-vertical .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--gap-l);
   align-items: center;
 }
@@ -37,6 +37,8 @@
   text-align: left;
 }
 .hero-vertical .hero-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-l);
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
@@ -47,7 +49,6 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  aspect-ratio: 4 / 5;
 }
 
 /* ── 2. Coverage stack (dark, 4×2 tiles) ── */
@@ -350,8 +351,7 @@
 @media (max-width: 720px) {
   .hero-vertical .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-vertical .hero-text  { max-width: 720px; }
-  .hero-vertical .hero-image { max-width: 560px; margin: 0 auto; }
-  .hero-vertical .hero-image img { aspect-ratio: 5 / 4; }
+  .hero-vertical .hero-image { max-width: 560px; margin: 0 auto; aspect-ratio: 5 / 4; }
   .hero-vertical h1 { font-size: 40px; }
   .claims-row { grid-template-columns: 1fr 1fr; }
 }
@@ -361,7 +361,7 @@
   .claims-block,
   .quote-block            { padding-top: 64px; padding-bottom: 64px; }
   .hero-vertical h1       { font-size: 40px; }
-  .hero-vertical .hero-image img { aspect-ratio: 4 / 3; }
+  .hero-vertical .hero-image { aspect-ratio: 4 / 3; }
   .stack-grid             { grid-template-columns: 1fr; }
   .claims-row             { grid-template-columns: 1fr; }
   .qf-row                 { grid-template-columns: 1fr; gap: 0; }

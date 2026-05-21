@@ -7,7 +7,7 @@
 }
 .hero-home .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--gap-l);
   align-items: center;
 }
@@ -34,6 +34,8 @@
   flex-wrap: wrap;
 }
 .hero-home .hero-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-l);
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
@@ -45,7 +47,6 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  aspect-ratio: 4 / 5;
 }
 
 /* ── 2. Specialists (dark, 4-col) ── */
@@ -483,14 +484,13 @@
 @media (max-width: 720px) {
   .hero-home .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-home .hero-text  { max-width: 720px; }
-  .hero-home .hero-image { max-width: 560px; margin: 0 auto; }
-  .hero-home .hero-image img { aspect-ratio: 5 / 4; }
+  .hero-home .hero-image { max-width: 560px; margin: 0 auto; aspect-ratio: 5 / 4; }
   .hero-home h1 { font-size: 40px; }
 }
 @media (max-width: 640px) {
   .hero-home              { padding-top: 56px; padding-bottom: 56px; }
   .hero-home h1           { font-size: 40px; }
-  .hero-home .hero-image img { aspect-ratio: 4 / 3; }
+  .hero-home .hero-image  { aspect-ratio: 4 / 3; }
   .sectors-grid           { grid-template-columns: 1fr; }
   .mission-quadrant       { grid-template-columns: 1fr 1fr; }
   .intake-row             { grid-template-columns: 1fr; gap: 0; }
