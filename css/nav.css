@@ -115,9 +115,11 @@
      trigger text "Coverage" (which sits at the <li> left edge). */
   left: -20px;
   transform: translateY(-8px);
-  /* Wide enough that "Physicians, dentists, CRNAs, allied health"
-     stays on one line in Hanken Grotesk. Longer descriptors wrap. */
-  width: 360px;
+  /* Snug fit: just wide enough for "Physicians, dentists, CRNAs, allied
+     health" on one line so the padding looks symmetric on left and
+     right (no big empty gap on the right side). Longer descriptors
+     wrap at the <br> we inserted. */
+  width: 304px;
   background: var(--inkSection);
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--radius-m);

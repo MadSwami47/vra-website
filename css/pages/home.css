@@ -1,17 +1,23 @@
 /* Home page — 8 sections matching design screenshot */
 
-/* ── 1. Hero (light) ── */
+/* ── 1. Hero (light, two-column: text + image) ── */
 .hero-home {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 .hero-home .hero-inner {
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: var(--gap-l);
+  align-items: center;
+}
+.hero-home .hero-text {
+  max-width: 560px;
 }
 .hero-home h1 {
   margin-bottom: 24px;
-  font-size: 88px;
-  line-height: 1.02;
+  font-size: 72px;
+  line-height: 1.04;
 }
 .hero-home h1 .accent-phrase {
   color: var(--accent);
@@ -19,13 +25,27 @@
 }
 .hero-home .hero-sub {
   margin-bottom: 36px;
-  max-width: 560px;
+  max-width: 520px;
   color: var(--inkSoft);
 }
 .hero-home .hero-buttons {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+.hero-home .hero-image {
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
+  background: var(--paperAlt);
+  position: relative;
+}
+.hero-home .hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
 }
 
 /* ── 2. Specialists (dark, 4-col) ── */
@@ -436,7 +456,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 1200px) {
-  .hero-home h1 { font-size: 72px; }
+  .hero-home h1 { font-size: 60px; }
   .sectors-section .section-header-row .col-head h2 { font-size: 44px; }
   .mission-body h2,
   .gaps-section .gaps-left h2,
@@ -451,14 +471,21 @@
   .gaps-section .gaps-inner,
   .intake-section .intake-inner { grid-template-columns: 1fr; }
 }
+@media (max-width: 960px) {
+  .hero-home .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-home .hero-text  { max-width: 720px; }
+  .hero-home .hero-image { max-width: 560px; margin: 0 auto; }
+  .hero-home .hero-image img { aspect-ratio: 5 / 4; }
+}
 @media (max-width: 900px) {
-  .hero-home h1 { font-size: 56px; }
+  .hero-home h1 { font-size: 52px; }
   .process-grid { grid-template-columns: 1fr; gap: 36px; }
   .difference-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .hero-home              { padding-top: 56px; padding-bottom: 56px; }
   .hero-home h1           { font-size: 40px; }
+  .hero-home .hero-image img { aspect-ratio: 4 / 3; }
   .sectors-grid           { grid-template-columns: 1fr; }
   .mission-quadrant       { grid-template-columns: 1fr 1fr; }
   .intake-row             { grid-template-columns: 1fr; gap: 0; }
