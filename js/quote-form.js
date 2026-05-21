@@ -49,8 +49,8 @@
     ],
     business: [
       ['retail',      'Retail / eCommerce'],
-      ['gas-station', 'C-store / gas station'],
-      ['professional','Professional services'],
+      ['gas-station', 'C-store / Gas Station'],
+      ['professional','Professional Services'],
       ['contractor',  'Contractor / Trades'],
       ['tech',        'Technology / SaaS'],
       ['food-sb',     'Food & Beverage'],
