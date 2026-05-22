@@ -16,6 +16,19 @@
 (function () {
   'use strict';
 
+  // ── Webhook configuration ────────────────────────────────────────
+  // Set this to your Make.com webhook URL once the Step 2 scenario is live.
+  // Empty string = client-side success only (useful for local preview).
+  const WEBHOOK_URL = 'https://hook.us2.make.com/bppb1fxjmgrxlpv75sul7nv9ryf0ela1';
+
+  // Canonical payload fields — sent in this exact order/shape so the
+  // Make.com scenario sees a consistent JSON structure on every submission.
+  const CANONICAL_FIELDS = [
+    'first_name', 'last_name', 'business_name', 'email', 'phone',
+    'industry', 'specialty', 'other_industry', 'other_specialty',
+    'current_carrier', 'policy_expiration', 'notes'
+  ];
+
   // ── Specialty options per industry ───────────────────────────────
   const SPECIALTIES = {
     healthcare: [
@@ -201,26 +214,45 @@
 
   // ── Submission ───────────────────────────────────────────────────
   function submitForm(form) {
-    // ┌─ Webhook integration point ─────────────────────────────────┐
-    // │ When backends are ready, swap the success-only behavior     │
-    // │ below for a fetch() POST to the chosen endpoint. The form   │
-    // │ data is already collected in `data` and uses the canonical  │
-    // │ field names (see quote-form-snippet.html header).           │
-    // │                                                             │
-    // │ Example:                                                    │
-    // │   fetch('https://hooks.example.com/vra-quote', {            │
-    // │     method: 'POST',                                         │
-    // │     headers: { 'Content-Type': 'application/json' },        │
-    // │     body: JSON.stringify(data),                             │
-    // │   }).then(() => showSuccess(form))                          │
-    // │     .catch((err) => showSubmitError(form, err));            │
-    // └─────────────────────────────────────────────────────────────┘
     const formData = new FormData(form);
     const data = {};
-    formData.forEach((value, key) => { data[key] = value; });
+    CANONICAL_FIELDS.forEach((name) => {
+      const v = formData.get(name);
+      data[name] = (v == null ? '' : String(v)).trim();
+    });
 
-    // For now: just show the client-side success panel.
-    showSuccess(form);
+    if (!WEBHOOK_URL) {
+      showSuccess(form);
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending…';
+    }
+    clearSubmitError(form);
+
+    fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('Webhook returned ' + response.status);
+        showSuccess(form);
+      })
+      .catch(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalLabel;
+        }
+        showSubmitError(
+          form,
+          'We couldn’t send your request — please try again, or call us directly.'
+        );
+      });
   }
 
   function showSuccess(form) {
@@ -232,6 +264,27 @@
       success.hidden = false;
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  }
+
+  function showSubmitError(form, message) {
+    let banner = form.querySelector('.qf-submit-error');
+    if (!banner) {
+      banner = document.createElement('p');
+      banner.className = 'qf-submit-error';
+      banner.setAttribute('role', 'alert');
+      const submitWrap = form.querySelector('.qf-submit');
+      if (submitWrap && submitWrap.parentNode) {
+        submitWrap.parentNode.insertBefore(banner, submitWrap.nextSibling);
+      } else {
+        form.appendChild(banner);
+      }
+    }
+    banner.textContent = message;
+  }
+
+  function clearSubmitError(form) {
+    const banner = form.querySelector('.qf-submit-error');
+    if (banner) banner.remove();
   }
 
   // ── Utilities ────────────────────────────────────────────────────

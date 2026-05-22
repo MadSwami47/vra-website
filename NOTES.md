@@ -36,7 +36,7 @@ These need to be filled before launch — flagged as `placeholder` for review:
 | Team member names| Roles/leads only — no individual names |
 | Team headshots   | Initials avatar in `--accentSoft`      |
 | Privacy / Terms  | Placeholder `#` links in footer        |
-| Form submission  | Phase 2 — currently shows success state on valid submit, no backend |
+| Form submission  | Wired to a Make.com webhook — set `WEBHOOK_URL` in `js/quote-form.js`; falls back to client-side success when empty |
 
 ## Logo
 
