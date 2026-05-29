@@ -31,7 +31,7 @@ These need to be filled before launch — flagged as `placeholder` for review:
 
 | Item             | Current placeholder                    |
 |------------------|----------------------------------------|
-| Phone number     | `+1 (555) 123-4567`                    |
+| Phone number     | `+1 (972) 360-9272` (live)             |
 | Office address   | "Texas · Serving nationally" (no street)|
 | Team member names| Roles/leads only — no individual names |
 | Team headshots   | Initials avatar in `--accentSoft`      |
